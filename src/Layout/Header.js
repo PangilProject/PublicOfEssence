@@ -56,7 +56,7 @@ const MenuItem = styled.div`
     text-align: center;
     font-size: 20px;
     font-weight: 500;
-    line-height: 20px;
+    /* line-height: 20px; */
     transition: color 0.5s ease;
 
     &:hover {
@@ -71,9 +71,13 @@ const LogoContainer = styled.div`
 
 const LogoImage = styled.img`
     position: absolute;
-    height: 50px;
+    height: 30px;
     transition: opacity 0.5s ease;
     opacity: ${(props) => (props.hovered ? 1 : 0)};
+
+    @media (min-width : 1000px) {
+        height : 50px
+    }
 `;
 
 export default Header;

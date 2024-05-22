@@ -34,7 +34,10 @@ const ContainerFooter = styled.div`
 `
 
 const LogoImage = styled.img`
-    height : 35px;
+    height : 30px;
+    @media (min-width : 1000px) {
+        height : 35px
+    }
     padding : 5px 0px;
 `
 
@@ -46,14 +49,24 @@ const FooterP = styled.p`
 `
 
 const WrapperFooterLeft = styled.div`
-    width: 50%;
+    width: 70%;
+    @media (min-width : 1000px){
+        width: 50%;
+    }
 `
 const WrapperFooterRight = styled.div`
-    width: 50%;
-
+    width: 30%;
     display: flex;
-    align-items: center;
-    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+
+    
+    @media (min-width : 1000px) {
+        width: 50%;
+        align-items: center;
+        justify-content: end;
+        flex-direction: row;
+    }
 
     & > a {
         color : black;
@@ -67,6 +80,10 @@ const WrapperFooterRight = styled.div`
 `
 
 const OutsideLink = styled.div`
-    margin: 0px 20px;
+    margin-bottom: 10px;
+
+    @media (min-width : 1000px){
+        margin: 0px 20px;
+    }
 `
 export default Footer;
