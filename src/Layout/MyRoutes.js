@@ -7,7 +7,7 @@ function MyRoutes() {
     return (
         <Routes>
             <Route element={<LayoutOutlet />}>
-                <Route index path="/home" element={<HomePage/> }/>
+                <Route index path="/" element={<HomePage/> }/>
                 <Route path = "/worship" element={<WorshipPage/>}/>
             </Route>
         </Routes>

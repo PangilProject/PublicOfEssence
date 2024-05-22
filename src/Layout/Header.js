@@ -8,7 +8,7 @@ function Header() {
 
     return (
         <ContainerHeader>
-            <MyLink to="/home">
+            <MyLink to="/">
                 <LogoImage
                     src={logoSrc}
                     alt="Essence Logo Image"
@@ -16,7 +16,7 @@ function Header() {
                     onMouseLeave={() => setLogoSrc("/Img/EssenceLogo.png")}/>
             </MyLink>
             <MenuItemList>
-                <MyLink to="/home">
+                <MyLink to="/">
                     <MenuItem>Home</MenuItem>
                 </MyLink>
 
