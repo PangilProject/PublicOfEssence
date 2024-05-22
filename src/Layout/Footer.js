@@ -28,8 +28,8 @@ const ContainerFooter = styled.div`
     width: 100%;
     height : 100px;
     margin-top: 100px;
+    display: flex; 
 
-    display: flex;
     
 `
 

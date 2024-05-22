@@ -49,9 +49,6 @@ const ContainerOutler = styled.div`
     width: 100%;
 
     height : 100%;
-    min-height: 500px;
-
-    /* background-color: red; */
 `
 
 const ContainerFooter = styled.div`

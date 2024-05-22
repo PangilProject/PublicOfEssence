@@ -57,7 +57,10 @@ export const Container100P100P = styled.div`
 
 const ContainerIntroImage = styled.div`
     width: 100%;
-    height: 500px;
+    @media (min-width : 1000px){
+        height: 500px;
+    }
+    height : 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
