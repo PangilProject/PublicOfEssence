@@ -1,9 +1,10 @@
 import styled from "styled-components";
-
+import AutoPlayAudio from "../Components/AutoPlayAudio";
 function Footer() {
     
     return (
-        <ContainerFooter>
+        <>
+            <ContainerFooter>
                 <WrapperFooterLeft>
                     <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
                     <FooterP>
@@ -17,10 +18,11 @@ function Footer() {
                     <a href = "https://www.facebook.com/profile.php?id=100064473554394"><OutsideLink>Facebook</OutsideLink></a>
                     <a href = "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"><OutsideLink>Youtube</OutsideLink></a>
                     <a href = "" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a>
-                </WrapperFooterRight>
+            </WrapperFooterRight>
             </ContainerFooter>
+            <AutoPlayAudio />
+        </>    
     );
-
 }
 
 const ContainerFooter = styled.div`
