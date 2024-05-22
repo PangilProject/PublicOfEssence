@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import MyRoutes from './Layout/MyRoutes';
 
 function App() {
   return (
     <div>
-      Essence Project
+      <MyRoutes/>
     </div>
   );
 }
