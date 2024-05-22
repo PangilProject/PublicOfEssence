@@ -67,7 +67,11 @@ const MenuItemList = styled.div`
 
 const MenuItem = styled.div`
     width: 100px;
-    /* text-align: center; */
+
+    @media (max-width : 480px){
+        text-align: left;
+    }
+    text-align: right;
     font-size: 20px;
     font-weight: 500;
     /* line-height: 20px; */
