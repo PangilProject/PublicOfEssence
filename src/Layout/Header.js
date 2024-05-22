@@ -28,8 +28,8 @@ function Header() {
                 </MyLink>
             </ContainerLogo>
             <MenuItemList>
-                <MyLink to="/">
-                    <MenuItem>Home</MenuItem>
+                <MyLink to="/about">
+                    <MenuItem>About</MenuItem>
                 </MyLink>
 
                 <MyLink to="/worship">
