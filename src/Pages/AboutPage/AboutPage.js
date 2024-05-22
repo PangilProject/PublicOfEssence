@@ -58,27 +58,53 @@ const WrapperRow = styled.div`
     &:last-child{
         margin-bottom: 0px;
     }
+
+    @media (max-width : 480px){
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const ContainerQuestion = styled.div`
-    width: 30%;
+    width: 40%;
+    @media (min-width : 1000px){
+            width: 30%;
+    }
+    @media (max-width : 480px){
+        width: 100%;
+    }
 
 `;
 
 const ContainerAnswer = styled.div`
-    width: 70%;
+    width: 60%;
+    @media (min-width : 1000px){
+            width: 70%;
+    }
+    @media (max-width : 480px){
+        width: 100%;
+        margin-top: 20px;
+    }
 `;
 
 const Question = styled.p`
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
-`
+
+    @media (min-width : 1000px){
+        font-size: 35px;
+    }
+`;
 
 const Answer = styled.p`
-    font-size: 18px;
+    font-size: 15px;
     line-height: 25px;
 
     margin-bottom: 10px;
+
+    @media (min-width : 1000px){
+            font-size: 18px;
+    }
 
     &:last-child {
         margin-bottom: 0px;
