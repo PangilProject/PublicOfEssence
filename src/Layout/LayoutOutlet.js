@@ -1,6 +1,7 @@
 import {Outlet} from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function LayoutOutlet() {
 
@@ -13,6 +14,9 @@ function LayoutOutlet() {
             <ContainerOutler>
                 <Outlet/>
             </ContainerOutler>
+            <ContainerFooter>
+                <Footer/>
+            </ContainerFooter>
         </ContainerLayoutOutlet>
     );
 }
@@ -34,7 +38,15 @@ const ContainerHeader = styled.div`
 
 const ContainerOutler = styled.div`
     width : 1000px;
-    min-height: 1000px;
+    height : 100%;
+    min-height: 500px;
+
+    /* background-color: red; */
+`
+
+const ContainerFooter = styled.div`
+    width: 1000px;
+    height : 100px;
 `
 
 export default LayoutOutlet;

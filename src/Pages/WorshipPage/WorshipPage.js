@@ -2,7 +2,8 @@ function WorshipPage() {
     
     return (
         <div>
-            Worship Page
+            <h3>WorshipPage</h3>
+            <h4>준비중입니다.</h4>
         </div>
     );
 }

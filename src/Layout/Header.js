@@ -1,19 +1,29 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { MyLink } from "../Components/MyLink";
 
 function Header() {
-    const [logoSrc, setLogoSrc] = useState("/Img/EssenceLogo.png");
+    const [hovered, setHovered] = useState(false);
 
     return (
         <ContainerHeader>
             <MyLink to="/">
-                <LogoImage
-                    src={logoSrc}
-                    alt="Essence Logo Image"
-                    onMouseEnter={() => setLogoSrc("/Img/EssenceLogoRed.png")}
-                    onMouseLeave={() => setLogoSrc("/Img/EssenceLogo.png")}/>
+                <LogoContainer
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                >
+                    <LogoImage
+                        src="/Img/EssenceLogoRed.png"
+                        alt="Essence Logo Image"
+                        hovered={hovered}
+                    />
+                    <LogoImage
+                        src="/Img/EssenceLogo.png"
+                        alt="Essence Logo Red Image"
+                        hovered={!hovered}
+                    />
+                </LogoContainer>
             </MyLink>
             <MenuItemList>
                 <MyLink to="/">
@@ -28,7 +38,7 @@ function Header() {
     );
 }
 
-const ContainerHeader = styled.div `
+const ContainerHeader = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,25 +46,34 @@ const ContainerHeader = styled.div `
     align-items: center;
 `;
 
-const MenuItemList = styled.div `
+const MenuItemList = styled.div`
     display: flex;
     justify-content: row;
 `;
 
-const MenuItem = styled.div `
+const MenuItem = styled.div`
     width: 100px;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    transition: color 0.5s ease;
 
     &:hover {
         color: #ff6347;
     }
 `;
 
-const LogoImage = styled.img `
+const LogoContainer = styled.div`
+    position: relative;
     height: 50px;
+`;
+
+const LogoImage = styled.img`
+    position: absolute;
+    height: 50px;
+    transition: opacity 0.5s ease;
+    opacity: ${(props) => (props.hovered ? 1 : 0)};
 `;
 
 export default Header;
