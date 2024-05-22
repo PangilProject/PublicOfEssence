@@ -32,7 +32,7 @@ const ContainerFooter = styled.div`
     margin-top: 100px;
     display: flex; 
 
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     
 `

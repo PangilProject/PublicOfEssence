@@ -53,6 +53,7 @@ const PlayButton = styled.button`
         background-color: #333;
         color : white;
     }
+    margin-bottom: 30px;
 `;
 
 export default AutoPlayAudio;
