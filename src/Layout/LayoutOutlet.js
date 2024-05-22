@@ -29,15 +29,25 @@ const ContainerLayoutOutlet = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
 `
 
 const ContainerHeader = styled.div`
-    width : 1000px;
+    @media (min-width : 1000px) {
+        width : 1000px;
+    }
+    width: 100%;
+
+
     height : 80px;
 `   
 
 const ContainerOutler = styled.div`
-    width : 1000px;
+    @media (min-width : 1000px) {
+        width : 1000px;
+    }
+    width: 100%;
+
     height : 100%;
     min-height: 500px;
 
@@ -45,7 +55,11 @@ const ContainerOutler = styled.div`
 `
 
 const ContainerFooter = styled.div`
-    width: 1000px;
+    @media (min-width : 1000px) {
+        width : 1000px;
+    }
+    width: 100%;
+
     height : 100px;
 `
 
