@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { MyLink } from "../Components/MyLink";
 
@@ -67,7 +66,6 @@ const MenuItemList = styled.div`
 
 const MenuItem = styled.div`
     width: 100px;
-
     @media (max-width : 480px){
         text-align: left;
     }
