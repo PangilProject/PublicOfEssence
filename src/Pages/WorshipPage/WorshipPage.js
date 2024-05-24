@@ -22,16 +22,16 @@ function WorshipPage() {
                             onMouseEnter={() => setHoveredItem(index)}
                             onMouseLeave={() => setHoveredItem(null)}>
                             {hoveredItem === index ?
-                                <ItemInfo color = "white">
+                                <ItemInfo color="white">
                                     <WorshipData>일자 | {value.date}</WorshipData>
                                     <WorshipPlace>장소 | {value.place}</WorshipPlace>
-                                    <Hr/>
+                                    <Hr />
                                     <WorshipTopic><strong>[주제]</strong> {value.topic} </WorshipTopic>
                                     <WorshipDescription>{value.description}</WorshipDescription>
-                                </ItemInfo> : 
-                                <ItemInfo color = "black">
+                                </ItemInfo> :
+                                <ItemInfo color="black">
                                     <WorshipCount>{value.count}회</WorshipCount>
-                                    <WorshipImage src = {value.image == "" ? emptyImage : value.image}></WorshipImage>
+                                    <WorshipImage src={value.image == "" ? emptyImage : value.image}></WorshipImage>
                                 </ItemInfo>
                             }
                         </WorshipInfoItem>
@@ -46,7 +46,7 @@ const ContainerWorshipList = styled.div `
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
 `;
 
@@ -62,7 +62,7 @@ const WorshipInfoItem = styled.div `
 
     transition: background-color 0.5s ease;
 
-    border : 2px solid #333;
+    border : 1.5px solid #36363650;
 
     &:last-child{
         margin-bottom : 15px;
@@ -82,13 +82,13 @@ const ItemInfo = styled.div`
 `;
 
 const WorshipCount = styled.p`
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 `;
 
 const WorshipImage = styled.img`
     width: 100%;
-    height : 300px;
+    height : 315px;
     background-color: red * 0.05;
     margin-top: 10px;
 
