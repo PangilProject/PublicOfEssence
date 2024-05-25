@@ -7,7 +7,7 @@ function WorshipPage() {
     
     const [hoveredItem, setHoveredItem] = useState(null);
 
-    const emptyImage = "https://lh3.googleusercontent.com/proxy/dku7PucOgRy8Krjr2r6Mw8uTnl2WjzXu6rQiug6ljqty7dVGnxvct4sXPHtUa69wyVYGiH8pmmXYmrMn9Xe1sdC1FBPlI4aSBJM";
+    const emptyImage = "https://ryeon0720.blogpay.io/img/img_noimg.png";
 
 
     return (
@@ -46,8 +46,7 @@ const ContainerWorshipList = styled.div `
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    justify-content: center;
 `;
 
 const WorshipInfoItem = styled.div `
@@ -59,6 +58,8 @@ const WorshipInfoItem = styled.div `
     margin-bottom : 15px;
     padding : 20px;
     box-sizing: border-box;
+
+    margin: 10px; // 광일아 이거 수정해
 
     transition: background-color 0.5s ease;
 
