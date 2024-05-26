@@ -59,14 +59,20 @@ const WorshipInfoItem = styled.div `
     padding : 20px;
     box-sizing: border-box;
 
-    margin: 10px; // 광일아 이거 수정해
+    margin: 25px; // 광일아 이거 수정해
 
     transition: background-color 0.5s ease;
 
     border : 1.5px solid #36363650;
 
-    &:last-child{
-        margin-bottom : 15px;
+    @media (min-width : 1000px){
+        &:nth-child(3n+1){
+            margin-left: 0;
+        }
+        &:nth-child(3n){
+            margin-right: 0;
+            margin-bottom : 15px;
+        }
     }
 
     &:hover {
