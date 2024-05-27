@@ -20,9 +20,9 @@ function ContactPage() {
             <ContainerMenu>
                 {ContactList.map((value, index) => (
                     <ContainerContactItem key={index}>
-                        <ContactTitle>일반 문의</ContactTitle>
-                        <ContactSubTitle>General Inquiry</ContactSubTitle>
-                        <ContactEmail>준비중@example.com</ContactEmail>
+                        <ContactTitle>{value.title}</ContactTitle>
+                        <ContactSubTitle>{value.subtitle}</ContactSubTitle>
+                        <ContactEmail>{value.email}</ContactEmail>
                     </ContainerContactItem>
                 )) }
             </ContainerMenu>
@@ -42,7 +42,7 @@ const ContainerContactItem = styled.div`
     width: 50%;
     height : 100%;
     box-sizing: border-box;
-    padding : 20px;
+    padding : 20px 0px;
     /* background-color: yellow; */
 
     display: flex;
