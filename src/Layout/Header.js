@@ -34,6 +34,9 @@ function Header() {
                 <MyLink to="/worship">
                     <MenuItem>Worship</MenuItem>
                 </MyLink>
+                <MyLink to="/contact">
+                    <MenuItem>Contact</MenuItem>
+                </MyLink>
             </MenuItemList>
         </ContainerHeader>
     );
