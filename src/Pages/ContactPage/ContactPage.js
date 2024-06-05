@@ -32,7 +32,7 @@ function ContactPage() {
 
 const ContainerMenu = styled.div`
     width: 100%;
-    height : 200px;
+    height : 150px;
     /* background-color: red; */
 
     display: flex;
@@ -42,12 +42,10 @@ const ContainerContactItem = styled.div`
     width: 50%;
     height : 100%;
     box-sizing: border-box;
-    padding : 20px 0px;
     /* background-color: yellow; */
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 `;
 
 const ContactTitle = styled.p`
@@ -59,11 +57,13 @@ const ContactSubTitle = styled.p`
     font-size: 15px;
     font-weight: 200;
     color : #333;
-    margin-top: 20px;
+    margin-top: 40px;
 `;
 
 const ContactEmail = styled.p`
     font-size: 15px;
     font-weight: 300;
+
+    margin-top: 10px;
 `;
 export default ContactPage;
