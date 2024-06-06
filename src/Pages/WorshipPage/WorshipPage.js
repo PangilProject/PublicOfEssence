@@ -59,7 +59,7 @@ const WorshipInfoItem = styled.div `
     padding : 20px;
     box-sizing: border-box;
 
-    margin: 25px; // 광일아 이거 수정해
+    margin: 0px 25px 50px 25px;
 
     transition: background-color 0.5s ease;
 
