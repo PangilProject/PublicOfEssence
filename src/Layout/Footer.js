@@ -42,7 +42,7 @@ const LogoImage = styled.img`
     @media (min-width : 1000px) {
         height : 35px
     }
-    padding : 5px 0px;
+    padding-bottom: 10px;
 `
 
 const FooterP = styled.p`
@@ -50,6 +50,10 @@ const FooterP = styled.p`
     margin : 0;
     font-size: 15px;
     color : gray;
+
+    @media (max-width : 480px){
+        font-size: 13px;
+    }
 `
 
 const WrapperFooterLeft = styled.div`
@@ -77,9 +81,14 @@ const WrapperFooterRight = styled.div`
         text-decoration: none;
         font-size : 15px;
         transition: color 0.5s ease;
+        font-weight: bold;
         &:hover{
             color : #ff6347;
         }
+        @media (max-width : 480px){
+        /* width: 150px; */
+        /* height : 200px */
+    }
     }
 `
 
