@@ -17,7 +17,8 @@ function Footer() {
                 <WrapperFooterRight>
                     <a href = "https://www.facebook.com/profile.php?id=100064473554394"><OutsideLink>Facebook</OutsideLink></a>
                     <a href = "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"><OutsideLink>Youtube</OutsideLink></a>
-                    <a href = "" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a>
+                    <a href = "https://www.instagram.com/essence_2016/"><OutsideLink>Instargram</OutsideLink></a>
+                    {/* <a href = "https://www.instagram.com/essence_2016/" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a> */}
             </WrapperFooterRight>
             </ContainerFooter>
             <AutoPlayAudio />
