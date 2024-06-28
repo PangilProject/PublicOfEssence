@@ -30,9 +30,11 @@ function Header() {
                 <MyLink to="/about">
                     <MenuItem>About</MenuItem>
                 </MyLink>
-
                 <MyLink to="/worship">
                     <MenuItem>Worship</MenuItem>
+                </MyLink>
+                <MyLink to="/schedule">
+                    <MenuItem>Schedule</MenuItem>
                 </MyLink>
                 <MyLink to="/contact">
                     <MenuItem>Contact</MenuItem>
@@ -53,7 +55,7 @@ const ContainerHeader = styled.div`
     }
     align-items: start;
 
-    @media (max-width : 480px){
+    @media (max-width : 550px){
         display: block;
     }
 `;
@@ -68,9 +70,11 @@ const MenuItemList = styled.div`
 `;
 
 const MenuItem = styled.div`
-    width: 100px;
-    @media (max-width : 480px){
+    @media (max-width : 550px){
         text-align: left;
+        margin-left: 0;
+        margin-right: 15px;
+        font-size: 15px;
     }
     text-align: right;
     font-size: 20px;
@@ -78,9 +82,12 @@ const MenuItem = styled.div`
     /* line-height: 20px; */
     transition: color 0.5s ease;
 
+    margin-left: 30px;
+
     &:hover {
         color: #ff6347;
     }
+    
 `;
 
 const LogoContainer = styled.div`
