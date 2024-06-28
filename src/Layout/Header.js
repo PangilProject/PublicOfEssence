@@ -7,6 +7,7 @@ function Header() {
 
     return (
         <ContainerHeader>
+
             <ContainerLogo>
                 <MyLink to="/">
                     <LogoContainer
@@ -46,7 +47,7 @@ function Header() {
 
 const ContainerHeader = styled.div`
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
 
@@ -60,13 +61,12 @@ const ContainerHeader = styled.div`
     }
 `;
 
-
 const ContainerLogo = styled.div`
     width: 50%;
 `
 const MenuItemList = styled.div`
     display: flex;
-    justify-content: row;
+    justify-content: row;   
 `;
 
 const MenuItem = styled.div`
@@ -76,8 +76,11 @@ const MenuItem = styled.div`
         margin-right: 15px;
         font-size: 15px;
     }
+    @media (min-width : 1000px){
+        font-size: 20px;
+    }
     text-align: right;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     /* line-height: 20px; */
     transition: color 0.5s ease;
