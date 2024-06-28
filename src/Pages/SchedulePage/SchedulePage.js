@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Container100P100P } from "../HomePage/HomePage";
-import { worshipList } from "./ScheduleListInfo";
+import { scheduleList } from "./ScheduleListInfo";
 
 function SchedulePage() {
     // hoveredItem은 현재 마우스를 올려놓은 항목의 인덱스를 저장하는 상태입니다.
@@ -31,7 +31,7 @@ function SchedulePage() {
     useEffect(() => {
         const checkImages = async () => {
             // 모든 이미지 존재 여부를 동시에 확인하기 위해 Promise 배열 생성
-            const promises = worshipList.map(value => {
+            const promises = scheduleList.map(value => {
                 if (value.image) {
                     // 이미지가 있는 경우 해당 이미지의 존재 여부를 체크하는 Promise 반환
                     return checkImageExists(value.image).then(exists => ({ [value.image]: exists }));
@@ -55,11 +55,11 @@ function SchedulePage() {
 
     return (
         <Container100P100P>
-            <ContainerWorshipList>
+            <ContainerscheduleList>
                 {
-                    // worshipList 배열을 순회하며 각 항목을 렌더링합니다.
-                    worshipList.map((value, index) => (
-                        <WorshipInfoItem
+                    // scheduleList 배열을 순회하며 각 항목을 렌더링합니다.
+                    scheduleList.map((value, index) => (
+                        <ScheduleInfoItem
                             key={index}
                             id={index}
                             onMouseEnter={() => setHoveredItem(index)} // 마우스가 항목 위로 올라갔을 때의 이벤트 핸들러
@@ -68,15 +68,15 @@ function SchedulePage() {
                             {hoveredItem === index ?
                                 // 항목이 호버된 상태일 때 렌더링할 내용
                                 <ItemInfo color="white">
-                                    <WorshipData>일자 | {value.date}</WorshipData>
-                                    <WorshipPlace>장소 | {value.place}</WorshipPlace>
+                                    <ScheduleTitle>{value.topic}</ScheduleTitle>
                                     <Hr />
-                                    <WorshipTopic><strong>[주제]</strong> {value.topic} </WorshipTopic>
-                                    <WorshipDescription>{value.description}</WorshipDescription>
+                                    <ScheduleInfo><strong>장소 |</strong> {value.place} </ScheduleInfo>
+                                    <ScheduleInfo><strong>대상 |</strong> {value.target} </ScheduleInfo>
+                                    <ScheduleInfo><strong>일시 |</strong> {value.date} </ScheduleInfo>
                                 </ItemInfo> :
                                 // 항목이 호버되지 않았을 때 렌더링할 내용
                                 <ItemInfo color="black">
-                                    <WorshipCount>{value.count}회</WorshipCount>
+                                    <WorshipCount>{value.title}</WorshipCount>
                                     <WorshipImage
                                         // 이미지가 존재하는지 여부에 따라 이미지를 선택합니다.
                                         src={imageExists[value.image] ? value.image : emptyImage}
@@ -84,24 +84,24 @@ function SchedulePage() {
                                     />
                                 </ItemInfo>
                             }
-                        </WorshipInfoItem>
+                        </ScheduleInfoItem>
                     ))
                 }
-            </ContainerWorshipList>
+            </ContainerscheduleList>
         </Container100P100P>
     );
 }
 
-const ContainerWorshipList = styled.div`
+const ContainerscheduleList = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 `;
 
-const WorshipInfoItem = styled.div`
+const ScheduleInfoItem = styled.div`
     width: 300px;
-    height: 400px;
+    height: 390px;
     border-radius: 20px;
     margin-bottom: 15px;
     padding: 20px;
@@ -132,7 +132,7 @@ const ItemInfo = styled.div`
 `;
 
 const WorshipCount = styled.p`
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 `;
 
@@ -146,17 +146,13 @@ const WorshipImage = styled.img`
     object-fit: cover;
 `;
 
-const WorshipPlace = styled.p`
+
+const ScheduleTitle = styled.p`
     font-size: 20px;
     font-weight: bold;
 `;
 
-const WorshipData = styled.p`
-    font-size: 20px;
-    font-weight: bold;
-`;
-
-const WorshipTopic = styled.p`
+const ScheduleInfo = styled.p`
     font-size: 15px;
 `;
 
