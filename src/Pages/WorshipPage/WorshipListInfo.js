@@ -72,5 +72,14 @@ export const worshipList = [
             image_alt: "8차 집회 포스터 이미지",
             description: "삶의 중심, 예배의 중심. 이 두 가지를 두고 우리의 중심이 바로 서 있는지를 묵상하고 예배하고 찬양할 수 있길 소망합니다. 중심이 바로 선 자가 되어 주님을 예배하고 찬양합니다.",
             topic : "중심",
+        },{
+            count: 9,
+            date: "2024-01-13",
+            place: "황금종교회",
+            color: "gray",
+            image: "/Img/worship_poster/worship_9.jpeg",
+            image_alt: "9차 집회 포스터 이미지",
+            description: "성벽을 다시 세우는 재건은 우리의 삶에도 동일하게 이루어져야 합니다. 말씀과 예배 그리고 찬양과 기도를 통해서 하나님의 나라를 꿈꾸는 우리의 삶의 벽을 재건하길 기도합니다.",
+            topic : "재건",
         },
     ]
