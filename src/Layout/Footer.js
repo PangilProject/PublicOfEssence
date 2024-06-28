@@ -5,21 +5,23 @@ function Footer() {
     return (
         <>
             <ContainerFooter>
-                <WrapperFooterLeft>
-                    <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
-                    <FooterP>
-                        ESSENCE(에센스, 시흥시 청소년 기독교 동아리 연합)
-                    </FooterP>
-                    <FooterP>
-                        ⓒESSENCE. 2024.All rights reserved.
+                <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
+                <WrapperFotter>
+                    <WrapperFooterLeft>
+                        <FooterP>
+                            ESSENCE(에센스, 시흥시 청소년 기독교 동아리 연합)
                         </FooterP>
-                </WrapperFooterLeft>
-                <WrapperFooterRight>
-                    <a href = "https://www.facebook.com/profile.php?id=100064473554394"><OutsideLink>Facebook</OutsideLink></a>
-                    <a href = "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"><OutsideLink>Youtube</OutsideLink></a>
-                    <a href = "https://www.instagram.com/essence_2016/"><OutsideLink>Instargram</OutsideLink></a>
-                    {/* <a href = "https://www.instagram.com/essence_2016/" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a> */}
-            </WrapperFooterRight>
+                        <FooterP>
+                            ⓒESSENCE. 2024.All rights reserved.
+                        </FooterP>
+                    </WrapperFooterLeft>
+                    <WrapperFooterRight>
+                        <a href = "https://www.facebook.com/profile.php?id=100064473554394"><OutsideLink>Facebook</OutsideLink></a>
+                        <a href = "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"><OutsideLink>Youtube</OutsideLink></a>
+                        <a href = "https://www.instagram.com/essence_2016/"><OutsideLink>Instargram</OutsideLink></a>
+                        {/* <a href = "https://www.instagram.com/essence_2016/" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a> */}
+                    </WrapperFooterRight>
+                </WrapperFotter>
             </ContainerFooter>
             <AutoPlayAudio />
         </>    
@@ -32,18 +34,29 @@ const ContainerFooter = styled.div`
     height : 100px;
     margin-top: 100px;
     display: flex; 
-
+    flex-direction: column;
     padding-bottom: 30px;
+    /* background-color: red; */
 
     
-`
+`;
 
-const LogoImage = styled.img`
-    height : 30px;
+const WrapperFotter = styled.div`
+    width :100%;
+    height : 100%;
+
+    display: flex;
+    /* background-color: blue; */
+`;
+
+const LogoImage = styled.img`   
+    width: 100px;
+    /* height : 30px; */
     @media (min-width : 1000px) {
         height : 35px
     }
     padding-bottom: 10px;
+    /* background-color: yellow; */
 `
 
 const FooterP = styled.p`
@@ -51,7 +64,6 @@ const FooterP = styled.p`
     margin : 0;
     font-size: 15px;
     color : gray;
-
     @media (max-width : 480px){
         font-size: 13px;
     }
@@ -68,13 +80,13 @@ const WrapperFooterRight = styled.div`
     display: flex;
     flex-direction: column;
     align-items: end;
-
+    /* background-color: aliceblue; */
     
     @media (min-width : 1000px) {
         width: 50%;
-        align-items: center;
         justify-content: end;
         flex-direction: row;
+        align-items: start;
     }
 
     & > a {
@@ -86,10 +98,8 @@ const WrapperFooterRight = styled.div`
         &:hover{
             color : #ff6347;
         }
-        @media (max-width : 480px){
-        /* width: 150px; */
-        /* height : 200px */
-    }
+        @media (max-width : 550px){
+        }
     }
 `
 
