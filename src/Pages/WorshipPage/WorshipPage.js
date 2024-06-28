@@ -30,19 +30,25 @@ function WorshipPage() {
     // 모든 이미지의 존재 여부를 확인하고, 그 결과를 상태로 저장합니다.
     useEffect(() => {
         const checkImages = async () => {
-            const newImageExists = {};
-            for (const value of worshipList) {
+            // 모든 이미지 존재 여부를 동시에 확인하기 위해 Promise 배열 생성
+            const promises = worshipList.map(value => {
                 if (value.image) {
-                    // 이미지가 있는 경우 해당 이미지의 존재 여부를 체크합니다.
-                    newImageExists[value.image] = await checkImageExists(value.image);
+                    // 이미지가 있는 경우 해당 이미지의 존재 여부를 체크하는 Promise 반환
+                    return checkImageExists(value.image).then(exists => ({ [value.image]: exists }));
                 } else {
-                    // 이미지가 없는 경우 기본적으로 false로 설정합니다.
-                    newImageExists[value.image] = false;
+                    // 이미지가 없는 경우 기본적으로 false로 설정된 Promise 반환
+                    return Promise.resolve({ [value.image]: false });
                 }
-            }
+            });
+
+            // 모든 이미지 존재 여부 확인 후 결과를 병합하여 새로운 객체 생성
+            const results = await Promise.all(promises);
+            const newImageExists = results.reduce((acc, cur) => ({ ...acc, ...cur }), {});
+
             // 이미지 존재 여부를 상태로 저장합니다.
             setImageExists(newImageExists);
         };
+
         // 이미지 존재 여부 확인을 시작합니다.
         checkImages();
     }, []);
