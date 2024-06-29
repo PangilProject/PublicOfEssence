@@ -10,19 +10,20 @@ function Header() {
 
             <ContainerLogo>
                 <MyLink to="/">
-                    <LogoContainer
-                        onMouseEnter={() => setHovered(true)}
-                        onMouseLeave={() => setHovered(false)}
-                    >
+                    <LogoContainer>
                         <LogoImage
                             src="/Img/EssenceLogoRed.png"
-                            alt="Essence Logo Image"
+                            alt="Essence Logo Red Image"
                             hovered={hovered}
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
                         />
                         <LogoImage
                             src="/Img/EssenceLogo.png"
-                            alt="Essence Logo Red Image"
+                            alt="Essence Logo Image"
                             hovered={!hovered}
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
                         />
                     </LogoContainer>
                 </MyLink>
