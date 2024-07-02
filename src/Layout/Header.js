@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import { MyLink } from "../Components/MyLink";
+import {MyLink} from "../Components/MyLink";
 
 function Header() {
-    const [hovered, setHovered] = useState(false);
+    const [hovered, setHovered] = useState(false); // 로고 및 메뉴에 대한 hover 스타일 지정
 
     return (
         <ContainerHeader>
-
             <ContainerLogo>
                 <MyLink to="/">
                     <LogoContainer>
@@ -16,18 +15,17 @@ function Header() {
                             alt="Essence Logo Red Image"
                             hovered={hovered}
                             onMouseEnter={() => setHovered(true)}
-                            onMouseLeave={() => setHovered(false)}
-                        />
+                            onMouseLeave={() => setHovered(false)}/>
                         <LogoImage
                             src="/Img/EssenceLogo.png"
                             alt="Essence Logo Image"
                             hovered={!hovered}
                             onMouseEnter={() => setHovered(true)}
-                            onMouseLeave={() => setHovered(false)}
-                        />
+                            onMouseLeave={() => setHovered(false)}/>
                     </LogoContainer>
                 </MyLink>
             </ContainerLogo>
+
             <MenuItemList>
                 <MyLink to="/about">
                     <MenuItem>About</MenuItem>
@@ -46,7 +44,7 @@ function Header() {
     );
 }
 
-const ContainerHeader = styled.div`
+const ContainerHeader = styled.div `
     width: 100%;
     height: 50%;
     display: flex;
@@ -62,15 +60,15 @@ const ContainerHeader = styled.div`
     }
 `;
 
-const ContainerLogo = styled.div`
+const ContainerLogo = styled.div `
     width: 50%;
 `
-const MenuItemList = styled.div`
+const MenuItemList = styled.div `
     display: flex;
     justify-content: row;   
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.div `
     @media (max-width : 550px){
         text-align: left;
         margin-left: 0;
@@ -94,16 +92,22 @@ const MenuItem = styled.div`
     
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.div `
     position: relative;
     height: 50px;
 `;
 
-const LogoImage = styled.img`
+const LogoImage = styled.img `
     position: absolute;
     height: 30px;
     transition: opacity 0.5s ease;
-    opacity: ${(props) => (props.hovered ? 1 : 0)};
+    opacity: ${ (
+    props
+) => (
+    props.hovered
+        ? 1
+        : 0
+)};
 
     @media (min-width : 1000px) {
         height : 50px
