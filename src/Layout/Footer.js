@@ -3,7 +3,7 @@ import AutoPlayAudio from "../Components/AutoPlayAudio";
 function Footer() {
     
     return (
-        <>
+        <div>
             <ContainerFooter>
                 <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
                 <WrapperFotter>
@@ -24,7 +24,7 @@ function Footer() {
                 </WrapperFotter>
             </ContainerFooter>
             <AutoPlayAudio />
-        </>    
+        </div>    
     );
 }
 
