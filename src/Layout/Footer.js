@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import AutoPlayAudio from "../Components/AutoPlayAudio";
 function Footer() {
-    
+
     return (
         <div>
             <ContainerFooter>
-                <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
+                <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter"/>
+
                 <WrapperFotter>
                     <WrapperFooterLeft>
                         <FooterP>
@@ -15,20 +16,27 @@ function Footer() {
                             ⓒESSENCE. 2024.All rights reserved.
                         </FooterP>
                     </WrapperFooterLeft>
+
                     <WrapperFooterRight>
-                        <a href = "https://www.facebook.com/profile.php?id=100064473554394"><OutsideLink>Facebook</OutsideLink></a>
-                        <a href = "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"><OutsideLink>Youtube</OutsideLink></a>
-                        <a href = "https://www.instagram.com/essence_2016/"><OutsideLink>Instargram</OutsideLink></a>
-                        {/* <a href = "https://www.instagram.com/essence_2016/" onClick={() => alert("준비중")}><OutsideLink>Instargram</OutsideLink></a> */}
+                        <a href="https://www.facebook.com/profile.php?id=100064473554394">
+                            <OutsideLink>Facebook</OutsideLink>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ">
+                            <OutsideLink>Youtube</OutsideLink>
+                        </a>
+                        <a href="https://www.instagram.com/essence_2016/">
+                            <OutsideLink>Instargram</OutsideLink>
+                        </a>
                     </WrapperFooterRight>
                 </WrapperFotter>
             </ContainerFooter>
-            <AutoPlayAudio />
-        </div>    
+
+            <AutoPlayAudio/>
+        </div>
     );
 }
 
-const ContainerFooter = styled.div`
+const ContainerFooter = styled.div `
 
     width: 100%;
     height : 100px;
@@ -41,7 +49,7 @@ const ContainerFooter = styled.div`
     
 `;
 
-const WrapperFotter = styled.div`
+const WrapperFotter = styled.div `
     width :100%;
     height : 100%;
 
@@ -49,7 +57,7 @@ const WrapperFotter = styled.div`
     /* background-color: blue; */
 `;
 
-const LogoImage = styled.img`   
+const LogoImage = styled.img `   
     width: 100px;
     /* height : 30px; */
     @media (min-width : 1000px) {
@@ -59,7 +67,7 @@ const LogoImage = styled.img`
     /* background-color: yellow; */
 `
 
-const FooterP = styled.p`
+const FooterP = styled.p `
     padding : 0;
     margin : 0;
     font-size: 15px;
@@ -69,13 +77,13 @@ const FooterP = styled.p`
     }
 `
 
-const WrapperFooterLeft = styled.div`
+const WrapperFooterLeft = styled.div `
     width: 70%;
     @media (min-width : 1000px){
         width: 50%;
     }
 `
-const WrapperFooterRight = styled.div`
+const WrapperFooterRight = styled.div `
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -103,7 +111,7 @@ const WrapperFooterRight = styled.div`
     }
 `
 
-const OutsideLink = styled.div`
+const OutsideLink = styled.div `
     margin-bottom: 10px;
 
     @media (min-width : 1000px){
