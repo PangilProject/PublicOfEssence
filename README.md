@@ -15,3 +15,9 @@
     </ul>
 </li>
 </ul>
+
+## 개발 스택
+
+### Frontend
+
+### Backend
