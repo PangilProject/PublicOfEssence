@@ -68,7 +68,7 @@ const MenuItemList = styled.div `
     justify-content: row;   
 `;
 
-const MenuItem = styled.div `
+export const MenuItem = styled.div `
     @media (max-width : 550px){
         text-align: left;
         margin-left: 0;

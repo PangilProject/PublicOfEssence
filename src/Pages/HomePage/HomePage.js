@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Modal from "../../Layout/Modal";
 
 function HomePage() {
     const images = [
@@ -7,6 +8,8 @@ function HomePage() {
         "/Img/worship/worship5.jpg",
         "/Img/worship/worship6.jpg"
     ];
+
+    const [modalVisible, setModalVisible] = useState(true);
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [opacity, setOpacity] = useState(1); // opacity 상태 추가
@@ -31,8 +34,19 @@ function HomePage() {
         }, 500); // 0.1초 후에 다음 이미지로 전환
     };
 
+    // const openModal = () => {
+    //     setModalVisible(true)
+    // }
+    const closeModal = () => {
+        setModalVisible(false)
+    }
+
+
     return (
         <Container100P100P>
+                {modalVisible && (
+                    <Modal visible={modalVisible} closable={true} maskClosable={true} onClose={closeModal}></Modal>
+                )}
             <ContainerIntroImage>
                 <Button onClick={handlePrevClick}>{"<"}</Button>
                 <IntroImage
