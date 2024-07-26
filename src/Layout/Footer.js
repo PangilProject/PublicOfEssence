@@ -18,10 +18,14 @@ function Footer() {
                     </WrapperFooterLeft>
 
                     <WrapperFooterRight>
-                        <a href="https://www.facebook.com/profile.php?id=100064473554394" target="_blank">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100064473554394"
+                            target="_blank">
                             <OutsideLink>Facebook</OutsideLink>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ" target="_blank">
+                        <a
+                            href="https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"
+                            target="_blank">
                             <OutsideLink>Youtube</OutsideLink>
                         </a>
                         <a href="https://www.instagram.com/essence_2016/" target="_blank">
