@@ -32,12 +32,12 @@ function WorshipPage() {
         const checkImages = async () => {
             // 모든 이미지 존재 여부를 동시에 확인하기 위해 Promise 배열 생성
             const promises = worshipList.map(value => {
-                if (value.image) {
+                if (value?.image) {
                     // 이미지가 있는 경우 해당 이미지의 존재 여부를 체크하는 Promise 반환
-                    return checkImageExists(value.image).then(exists => ({ [value.image]: exists }));
+                    return checkImageExists(value?.image).then(exists => ({ [value?.image]: exists }));
                 } else {
                     // 이미지가 없는 경우 기본적으로 false로 설정된 Promise 반환
-                    return Promise.resolve({ [value.image]: false });
+                    return Promise.resolve({ [value?.image]: false });
                 }
             });
 
@@ -68,19 +68,19 @@ function WorshipPage() {
                             {hoveredItem === index ?
                                 // 항목이 호버된 상태일 때 렌더링할 내용
                                 <ItemInfo color="white">
-                                    <WorshipData>일자 | {value.date}</WorshipData>
-                                    <WorshipPlace>장소 | {value.place}</WorshipPlace>
+                                    <WorshipData>일자 | {value?.date}</WorshipData>
+                                    <WorshipPlace>장소 | {value?.place}</WorshipPlace>
                                     <Hr />
-                                    <WorshipTopic><strong>[주제]</strong> {value.topic} </WorshipTopic>
-                                    <WorshipDescription>{value.description}</WorshipDescription>
+                                    <WorshipTopic><strong>[주제]</strong> {value?.topic} </WorshipTopic>
+                                    <WorshipDescription>{value?.description}</WorshipDescription>
                                 </ItemInfo> :
                                 // 항목이 호버되지 않았을 때 렌더링할 내용
                                 <ItemInfo color="black">
-                                    <WorshipCount>{value.count}회</WorshipCount>
+                                    <WorshipCount>{value?.count}회</WorshipCount>
                                     <WorshipImage
                                         // 이미지가 존재하는지 여부에 따라 이미지를 선택합니다.
-                                        src={imageExists[value.image] ? value.image : emptyImage}
-                                        alt={value.image_alt || "worship_poster"}
+                                        src={imageExists[value?.image] ? value?.image : emptyImage}
+                                        alt={value?.image_alt || "worship_poster"}
                                     />
                                 </ItemInfo>
                             }
