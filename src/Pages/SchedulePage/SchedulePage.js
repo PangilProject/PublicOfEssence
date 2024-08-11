@@ -32,12 +32,12 @@ function SchedulePage() {
         const checkImages = async () => {
             // 모든 이미지 존재 여부를 동시에 확인하기 위해 Promise 배열 생성
             const promises = scheduleList.map(value => {
-                if (value.image) {
+                if (value?.image) {
                     // 이미지가 있는 경우 해당 이미지의 존재 여부를 체크하는 Promise 반환
-                    return checkImageExists(value.image).then(exists => ({ [value.image]: exists }));
+                    return checkImageExists(value?.image).then(exists => ({ [value?.image]: exists }));
                 } else {
                     // 이미지가 없는 경우 기본적으로 false로 설정된 Promise 반환
-                    return Promise.resolve({ [value.image]: false });
+                    return Promise.resolve({ [value?.image]: false });
                 }
             });
 
@@ -68,19 +68,19 @@ function SchedulePage() {
                             {hoveredItem === index ?
                                 // 항목이 호버된 상태일 때 렌더링할 내용
                                 <ItemInfo color="white">
-                                    <ScheduleTitle>{value.topic}</ScheduleTitle>
+                                    <ScheduleTitle>{value?.topic}</ScheduleTitle>
                                     <Hr />
-                                    <ScheduleInfo><strong>장소 |</strong> {value.place} </ScheduleInfo>
-                                    <ScheduleInfo><strong>대상 |</strong> {value.target} </ScheduleInfo>
-                                    <ScheduleInfo><strong>일시 |</strong> {value.date} </ScheduleInfo>
+                                    <ScheduleInfo><strong>장소 |</strong> {value?.place} </ScheduleInfo>
+                                    <ScheduleInfo><strong>대상 |</strong> {value?.target} </ScheduleInfo>
+                                    <ScheduleInfo><strong>일시 |</strong> {value?.date} </ScheduleInfo>
                                 </ItemInfo> :
                                 // 항목이 호버되지 않았을 때 렌더링할 내용
                                 <ItemInfo color="black">
-                                    <WorshipCount>{value.title}</WorshipCount>
+                                    <WorshipCount>{value?.title}</WorshipCount>
                                     <WorshipImage
                                         // 이미지가 존재하는지 여부에 따라 이미지를 선택합니다.
-                                        src={imageExists[value.image] ? value.image : emptyImage}
-                                        alt={value.image_alt || "worship_poster"}
+                                        src={imageExists[value?.image] ? value?.image : emptyImage}
+                                        alt={value?.image_alt || "worship_poster"}
                                     />
                                 </ItemInfo>
                             }
