@@ -34,7 +34,12 @@ function HomePage() {
         }, 500); // 0.1초 후에 다음 이미지로 전환
     };
 
-    // const openModal = () => {     setModalVisible(true) }
+    /*
+    const openModal = () => {
+        setModalVisible(true)
+    }
+    */
+    
     const closeModal = () => {
         setModalVisible(false)
     }
@@ -52,16 +57,11 @@ function HomePage() {
             }
             <ContainerIntroImage>
                 <Button onClick={handlePrevClick}>{"<"}</Button>
-                <IntroImage src={images[currentImageIndex]} alt="Intro Image" style={{
-                        opacity
-                    }}
-                    // opacity 값 적용
+                <IntroImage src={images[currentImageIndex]} alt="Intro Image"
+                    style={{opacity}} // opacity 값 적용
                 />
                 <Button onClick={handleNextClick}>{">"}</Button>
             </ContainerIntroImage>
-
-            {/* <ContainerPosterList> */}
-            {/* </ContainerPosterList> */}
 
         </Container100P100P>
     );
