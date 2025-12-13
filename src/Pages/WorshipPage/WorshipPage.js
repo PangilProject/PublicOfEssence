@@ -1,8 +1,8 @@
 import { Container100P100P } from "../../Components/BaseContainer";
-import { worshipList } from "./WorshipListInfo";
-import { useImageCheck } from "./useImageCheck";
-import WorshipItem from "./WorshipItem";
-import { ContainerWorshipList } from "./WorshipPage.styles";
+import { worshipList } from "./constants";
+import { useImageCheck } from "./hooks/useImageCheck";
+import WorshipItem from "./components/WorshipItem";
+import { ContainerWorshipList } from "./styles";
 
 function WorshipPage() {
   const imageExists = useImageCheck(worshipList);

@@ -6,7 +6,7 @@ import {
   ContainerQuestion,
   Question,
   WrapperRow,
-} from "./AboutPage.style";
+} from "./styles";
 
 function AboutPage() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../../Layout/Modal";
-import ImageSlider from "../../Components/ImageSlider/ImageSlider";
+import ImageSlider from "./components/ImageSlider";
 import { Container100P100P } from "../../Components/BaseContainer";
 
 function HomePage() {

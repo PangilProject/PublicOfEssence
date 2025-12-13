@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { Button, ContainerIntroImage, IntroImage } from "./ImageSlider.styles";
-import { slideImages } from "./constants";
+import { slideImages } from "../constants";
+import {
+  Button,
+  ContainerIntroImage,
+  IntroImage,
+} from "../styles/slider.styles";
 
 function ImageSlider() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -9,7 +9,7 @@ import {
   WorshipDescription,
   WorshipCount,
   WorshipImage,
-} from "./WorshipPage.styles";
+} from "../styles";
 
 const emptyImage = "/Img/Image404.png";
 
