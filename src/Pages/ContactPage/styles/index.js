@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ContainerMenu = styled.div`
   width: 100%;
   height: 150px;
-  /* background-color: red; */
 
   display: flex;
 `;
@@ -12,7 +11,6 @@ export const ContainerContactItem = styled.div`
   width: 50%;
   height: 100%;
   box-sizing: border-box;
-  /* background-color: yellow; */
 
   display: flex;
   flex-direction: column;

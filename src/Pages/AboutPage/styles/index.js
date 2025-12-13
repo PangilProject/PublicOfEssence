@@ -5,7 +5,6 @@ export const WrapperRow = styled.div`
   height: auto;
 
   display: flex;
-  /* padding-top : 50px; */
   box-sizing: border-box;
 
   margin-bottom: 100px;
