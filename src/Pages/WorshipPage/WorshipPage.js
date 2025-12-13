@@ -1,6 +1,6 @@
 import { Container100P100P } from "../../Components/BaseContainer";
 import { worshipList } from "./constants";
-import { useImageCheck } from "./hooks/useImageCheck";
+import { useImageCheck } from "../../hooks/useImageCheck";
 import WorshipItem from "./components/WorshipItem";
 import { ContainerWorshipList } from "./styles";
 
