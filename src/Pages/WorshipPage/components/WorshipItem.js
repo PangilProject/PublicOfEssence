@@ -11,7 +11,7 @@ import {
   WorshipImage,
 } from "../styles";
 
-const emptyImage = "/Img/Image404.png";
+import emptyImage from "../../../assets/images/Image404.png";
 
 function WorshipItem({ item, imageExists }) {
   const [isHovered, setIsHovered] = useState(false);
