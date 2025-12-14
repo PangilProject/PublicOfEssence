@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../../Layout/Modal";
+import Modal from "../../Layout/Modal/Modal";
 import ImageSlider from "./components/ImageSlider";
 import { Container100P100P } from "../../Components/BaseContainer";
 
