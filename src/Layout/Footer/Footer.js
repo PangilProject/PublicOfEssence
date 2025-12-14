@@ -9,11 +9,13 @@ import {
   WrapperFotter,
 } from "./styles";
 
+import essenceLogo from "../../assets/images/EssenceLogo.png";
+
 function Footer() {
   return (
     <div>
       <ContainerFooter>
-        <LogoImage src="/Img/EssenceLogo.png" alt="Logo Image in Fotter" />
+        <LogoImage src={essenceLogo} alt="Logo Image in Fotter" />
 
         <WrapperFotter>
           <WrapperFooterLeft>

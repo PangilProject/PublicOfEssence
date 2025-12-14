@@ -8,6 +8,8 @@ import {
   MenuItem,
   MenuItemList,
 } from "./styles";
+import essenceLogoRed from "../../assets/images/EssenceLogoRed.png";
+import essenceLogo from "../../assets/images/EssenceLogo.png";
 
 function Header() {
   const [hovered, setHovered] = useState(false);
@@ -17,14 +19,14 @@ function Header() {
         <MyLink to="/">
           <LogoContainer>
             <LogoImage
-              src="/Img/EssenceLogoRed.png"
+              src={essenceLogoRed}
               alt="Essence Logo Red Image"
               hovered={hovered}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             />
             <LogoImage
-              src="/Img/EssenceLogo.png"
+              src={essenceLogo}
               alt="Essence Logo Image"
               hovered={!hovered}
               onMouseEnter={() => setHovered(true)}
