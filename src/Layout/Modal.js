@@ -23,7 +23,7 @@ function Modal({ className, onClose, maskClosable, closable, visible }) {
         onClose(false);
       }
     }
-  }, [VISITED_BEFORE_DATE]);
+  }, [VISITED_BEFORE_DATE, VISITED_NOW_DATE, onClose]);
 
   const Dayclose = (e) => {
     if (onClose) {

@@ -25,17 +25,25 @@ function Footer() {
             <a
               href="https://www.facebook.com/profile.php?id=100064473554394"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <OutsideLink>Facebook</OutsideLink>
             </a>
+
             <a
               href="https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <OutsideLink>Youtube</OutsideLink>
             </a>
-            <a href="https://www.instagram.com/essence_2016/" target="_blank">
-              <OutsideLink>Instargram</OutsideLink>
+
+            <a
+              href="https://www.instagram.com/essence_2016/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OutsideLink>Instagram</OutsideLink>
             </a>
           </WrapperFooterRight>
         </WrapperFotter>
