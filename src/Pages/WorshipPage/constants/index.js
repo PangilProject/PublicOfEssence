@@ -7,6 +7,7 @@ import worship6 from "../../../assets/images/worship_poster/worship_6.jpg";
 import worship7 from "../../../assets/images/worship_poster/worship_7.jpeg";
 import worship8 from "../../../assets/images/worship_poster/worship_8.jpeg";
 import worship9 from "../../../assets/images/worship_poster/worship_9.jpeg";
+import worship10 from "../../../assets/images/worship_poster/worship_10.png";
 
 export const worshipList = [
   {
@@ -107,5 +108,16 @@ export const worshipList = [
     description:
       "말씀과 예배, 찬양과 기도를 통해 삶의 무너진 벽을 다시 세우는 재건의 은혜를 나눕니다.",
     topic: "재건",
+  },
+  {
+    count: 10,
+    date: "2025-01-18",
+    place: "사랑스러운교회",
+    color: "gray",
+    image: worship10,
+    image_alt: "10차 집회 포스터 이미지",
+    description:
+      "하나님이 이 시대에 '사사'와 같이 함께하시며 인도하심에 대한 감사를 표현하고, 찬양과 경배를 통해 하나님을 높입니다.",
+    topic: "THE ACTOR",
   },
 ];
