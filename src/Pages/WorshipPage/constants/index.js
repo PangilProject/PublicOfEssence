@@ -8,6 +8,7 @@ import worship7 from "../../../assets/images/worship_poster/worship_7.jpeg";
 import worship8 from "../../../assets/images/worship_poster/worship_8.jpeg";
 import worship9 from "../../../assets/images/worship_poster/worship_9.jpeg";
 import worship10 from "../../../assets/images/worship_poster/worship_10.png";
+import worship11 from "../../../assets/images/worship_poster/worship_11.jpg";
 
 export const worshipList = [
   {
@@ -119,5 +120,16 @@ export const worshipList = [
     description:
       "하나님이 이 시대에 '사사'와 같이 함께하시며 인도하심에 대한 감사를 표현하고, 찬양과 경배를 통해 하나님을 높입니다.",
     topic: "THE ACTOR",
+  },
+  {
+    count: 11,
+    date: "2026-01-17",
+    place: "양문교회",
+    color: "gray",
+    image: worship11,
+    image_alt: "11차 집회 포스터 이미지",
+    description:
+      "믿음의 공동체 안에서 서로를 돌아보고 격려하며, 사랑과 선행으로 연결되어 혼자가 아닌 ‘함께’ 신앙의 길을 걸어가도록 초대합니다.",
+    topic: "함께가자",
   },
 ];
