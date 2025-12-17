@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "../../Layout/Modal/Modal";
 import ImageSlider from "./components/ImageSlider";
 import { Container100P100P } from "../../Components/BaseContainer";
+import YouTubeSlider from "./components/YoutubeSlider";
 
 function HomePage() {
   const [modalVisible, setModalVisible] = useState(true);
@@ -21,6 +22,7 @@ function HomePage() {
         ></Modal>
       )}
       <ImageSlider />
+      <YouTubeSlider />
     </Container100P100P>
   );
 }
