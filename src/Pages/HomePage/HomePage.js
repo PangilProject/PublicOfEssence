@@ -3,6 +3,7 @@ import Modal from "../../Layout/Modal/Modal";
 import ImageSlider from "./components/ImageSlider";
 import { Container100P100P } from "../../Components/BaseContainer";
 import YouTubeSlider from "./components/YoutubeSlider";
+import HeroSection from "./components/HeroSection/HeroSection";
 
 function HomePage() {
   const [modalVisible, setModalVisible] = useState(true);
@@ -22,6 +23,7 @@ function HomePage() {
         ></Modal>
       )}
       <ImageSlider />
+      <HeroSection words={["주일 예배 실황", "LIVE WORSHIP"]} />
       <YouTubeSlider />
     </Container100P100P>
   );
