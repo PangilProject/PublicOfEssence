@@ -7,7 +7,8 @@ const videoIds = ["zY_7snBXJ6o", "Kph6OMHaFjk", "-IcynLgzh-s"];
 
 export default function YouTubeSlider() {
   const playerRefs = useRef({});
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
     dots: true,
