@@ -12,6 +12,7 @@ import {
 import essenceLogo from "../../assets/images/EssenceLogo.png";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div>
       <ContainerFooter>
@@ -19,8 +20,8 @@ function Footer() {
 
         <WrapperFotter>
           <WrapperFooterLeft>
-            <FooterP>ESSENCE(에센스, 시흥시 청소년 기독교 동아리 연합)</FooterP>
-            <FooterP>ⓒESSENCE. 2025.All rights reserved.</FooterP>
+            <FooterP>ESSENCE(에센스, 시흥시 다음세대 기도모임)</FooterP>
+            <FooterP>ⓒESSENCE. {currentYear}.All rights reserved.</FooterP>
           </WrapperFooterLeft>
 
           <WrapperFooterRight>
