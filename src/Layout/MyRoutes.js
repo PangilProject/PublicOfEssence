@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import LayoutOutlet from "./LayoutOutlet";
+import ResourcePage from "../Pages/ResourcePage/ResourcePage";
 
 const HomePage = lazy(() => import("../Pages/HomePage/HomePage"));
 const AboutPage = lazy(() => import("../Pages/AboutPage/AboutPage"));
@@ -15,8 +16,9 @@ function MyRoutes() {
         <Route index path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/worship" element={<WorshipPage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/resource" element={<ResourcePage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
   );

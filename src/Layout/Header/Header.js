@@ -46,6 +46,9 @@ function Header() {
         <MyLink to="/schedule">
           <MenuItem>Schedule</MenuItem>
         </MyLink>
+        <MyLink to="/resource">
+          <MenuItem>Resource</MenuItem>
+        </MyLink>
         <MyLink to="/contact">
           <MenuItem>Contact</MenuItem>
         </MyLink>

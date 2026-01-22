@@ -11,7 +11,7 @@ export const ContainerHeader = styled.div`
   }
   align-items: start;
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     display: block;
   }
 `;
@@ -25,7 +25,7 @@ export const MenuItemList = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     text-align: left;
     margin-left: 0;
     margin-right: 15px;
