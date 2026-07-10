@@ -1,30 +1,28 @@
-import { Outlet } from "react-router-dom";
+"use client";
+
+import type { ReactNode } from "react";
 import styled from "styled-components";
-import React, { Suspense } from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import PageSkeleton from "./PageSkeleton";
-function LayoutOutlet() {
+
+/** 기존 LayoutOutlet을 대체 — 모든 페이지 공통 셸 (react-router Outlet → children) */
+function SiteLayout({ children }: { children: ReactNode }) {
   return (
-    <ContainerLayoutOutlet>
+    <ContainerSiteLayout>
       <ContainerHeader>
         <Header />
       </ContainerHeader>
 
-      <ContainerOutler>
-        <Suspense fallback={<PageSkeleton />}>
-          <Outlet />
-        </Suspense>
-      </ContainerOutler>
+      <ContainerMain>{children}</ContainerMain>
 
       <ContainerFooter>
         <Footer />
       </ContainerFooter>
-    </ContainerLayoutOutlet>
+    </ContainerSiteLayout>
   );
 }
 
-const ContainerLayoutOutlet = styled.div`
+const ContainerSiteLayout = styled.div`
   width: 100%;
   height: auto;
   padding: 20px;
@@ -35,7 +33,7 @@ const ContainerLayoutOutlet = styled.div`
   box-sizing: border-box;
 `;
 
-const ContainerHeader = styled.div`
+const ContainerHeader = styled.header`
   @media (min-width: 1000px) {
     width: 1000px;
   }
@@ -44,7 +42,7 @@ const ContainerHeader = styled.div`
   height: 80px;
 `;
 
-const ContainerOutler = styled.div`
+const ContainerMain = styled.main`
   @media (min-width: 1000px) {
     width: 1000px;
   }
@@ -53,7 +51,7 @@ const ContainerOutler = styled.div`
   height: 100%;
 `;
 
-const ContainerFooter = styled.div`
+const ContainerFooter = styled.footer`
   @media (min-width: 1000px) {
     width: 1000px;
   }
@@ -62,4 +60,4 @@ const ContainerFooter = styled.div`
   height: 100px;
 `;
 
-export default LayoutOutlet;
+export default SiteLayout;

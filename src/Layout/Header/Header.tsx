@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import { MyLink } from "../../Components/MyLink";
 import {
   ContainerHeader,
@@ -16,19 +18,19 @@ function Header() {
   return (
     <ContainerHeader>
       <ContainerLogo>
-        <MyLink to="/">
+        <MyLink href="/">
           <LogoContainer>
             <LogoImage
-              src={essenceLogoRed}
+              src={essenceLogoRed.src}
               alt="Essence Logo Red Image"
-              hovered={hovered}
+              $hovered={hovered}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             />
             <LogoImage
-              src={essenceLogo}
+              src={essenceLogo.src}
               alt="Essence Logo Image"
-              hovered={!hovered}
+              $hovered={!hovered}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             />
@@ -37,19 +39,19 @@ function Header() {
       </ContainerLogo>
 
       <MenuItemList>
-        <MyLink to="/about">
+        <MyLink href="/about">
           <MenuItem>About</MenuItem>
         </MyLink>
-        <MyLink to="/worship">
+        <MyLink href="/worship">
           <MenuItem>Worship</MenuItem>
         </MyLink>
-        <MyLink to="/schedule">
+        <MyLink href="/schedule">
           <MenuItem>Schedule</MenuItem>
         </MyLink>
-        <MyLink to="/resource">
+        <MyLink href="/resource">
           <MenuItem>Resource</MenuItem>
         </MyLink>
-        <MyLink to="/contact">
+        <MyLink href="/contact">
           <MenuItem>Contact</MenuItem>
         </MyLink>
       </MenuItemList>

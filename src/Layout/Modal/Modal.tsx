@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
+"use client";
+
+import React, { useEffect, type MouseEvent } from "react";
 import { MenuItem } from "../Header/styles";
 import {
   Close,
@@ -11,39 +12,48 @@ import {
   ModalWrapper,
 } from "./styles";
 
-function Modal({ className, onClose, maskClosable, closable, visible }) {
-  const onMaskClick = (e) => {
+interface ModalProps {
+  className?: string;
+  onClose: (e?: unknown) => void;
+  maskClosable?: boolean;
+  closable?: boolean;
+  visible: boolean;
+}
+
+function Modal({ className, onClose, maskClosable, closable, visible }: ModalProps) {
+  const onMaskClick = (e: MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose(e);
     }
   };
 
-  const VISITED_BEFORE_DATE = localStorage.getItem("VisitCookie");
-  const VISITED_NOW_DATE = Math.floor(new Date().getDate());
-
+  // localStorage는 브라우저 전용 API — 프리렌더(SSR) 중 접근하면 크래시하므로 useEffect 안에서만 읽는다
   useEffect(() => {
-    if (VISITED_BEFORE_DATE !== null) {
-      if (VISITED_BEFORE_DATE === VISITED_NOW_DATE) {
+    const visitedBeforeDate = localStorage.getItem("VisitCookie");
+    const visitedNowDate = String(new Date().getDate());
+
+    if (visitedBeforeDate !== null) {
+      if (visitedBeforeDate === visitedNowDate) {
         localStorage.removeItem("VisitCookie");
         onClose(true);
       }
-      if (VISITED_BEFORE_DATE !== VISITED_NOW_DATE) {
+      if (visitedBeforeDate !== visitedNowDate) {
         onClose(false);
       }
     }
-  }, [VISITED_BEFORE_DATE, VISITED_NOW_DATE, onClose]);
+  }, [onClose]);
 
-  const Dayclose = (e) => {
+  const Dayclose = (e: MouseEvent) => {
     if (onClose) {
       onClose(e);
 
       const expiry = new Date();
       const expiryDate = expiry.getDate() + 1;
-      localStorage.setItem("VisitCookie", expiryDate);
+      localStorage.setItem("VisitCookie", String(expiryDate));
     }
   };
 
-  const close = (e) => {
+  const close = (e: MouseEvent) => {
     if (onClose) {
       onClose(e);
     }
@@ -55,14 +65,14 @@ function Modal({ className, onClose, maskClosable, closable, visible }) {
 
   return (
     <div>
-      <ModalOverlay visible={visible} />
+      <ModalOverlay $visible={visible} />
       <ModalWrapper
         className={className}
-        onClick={maskClosable ? onMaskClick : null}
-        tabIndex="-1"
-        visible={visible}
+        onClick={maskClosable ? onMaskClick : undefined}
+        tabIndex={-1}
+        $visible={visible}
       >
-        <ModalInner tabIndex="0" className="modal-inner">
+        <ModalInner tabIndex={0} className="modal-inner">
           <ModalInner2>
             <ImgStyle>
               <h2>Essence LinkTree</h2>
@@ -89,9 +99,5 @@ function Modal({ className, onClose, maskClosable, closable, visible }) {
     </div>
   );
 }
-
-Modal.propTypes = {
-  visible: PropTypes.bool,
-};
 
 export default React.memo(Modal);

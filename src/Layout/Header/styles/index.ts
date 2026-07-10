@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
@@ -19,7 +21,7 @@ export const ContainerHeader = styled.div`
 export const ContainerLogo = styled.div`
   width: 50%;
 `;
-export const MenuItemList = styled.div`
+export const MenuItemList = styled.nav`
   display: flex;
   justify-content: row;
 `;
@@ -51,11 +53,11 @@ export const LogoContainer = styled.div`
   height: 50px;
 `;
 
-export const LogoImage = styled.img`
+export const LogoImage = styled.img<{ $hovered: boolean }>`
   position: absolute;
   height: 30px;
   transition: opacity 0.5s ease;
-  opacity: ${(props) => (props.hovered ? 1 : 0)};
+  opacity: ${(props) => (props.$hovered ? 1 : 0)};
 
   @media (min-width: 1000px) {
     height: 50px;

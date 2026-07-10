@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 
 export const Container100P100P = styled.div`

@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 
 export const ModalInner2 = styled.div`
@@ -36,9 +38,9 @@ export const Close = styled.span`
   cursor: pointer;
 `;
 
-export const ModalWrapper = styled.div`
+export const ModalWrapper = styled.div<{ $visible: boolean }>`
   box-sizing: border-box;
-  display: ${(props) => (props.visible ? "block" : "none")};
+  display: ${(props) => (props.$visible ? "block" : "none")};
   position: fixed;
   top: 0;
   right: 0;
@@ -49,9 +51,9 @@ export const ModalWrapper = styled.div`
   outline: 0;
 `;
 
-export const ModalOverlay = styled.div`
+export const ModalOverlay = styled.div<{ $visible: boolean }>`
   box-sizing: border-box;
-  display: ${(props) => (props.visible ? "block" : "none")};
+  display: ${(props) => (props.$visible ? "block" : "none")};
   position: fixed;
   top: 0;
   left: 0;

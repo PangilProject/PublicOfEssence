@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import StyledComponentsRegistry from "./_lib/registry";
+import SiteLayout from "@/Layout/SiteLayout";
 
 // 페이지별 세부 metadata는 Phase 4에서 확장
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <SiteLayout>{children}</SiteLayout>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

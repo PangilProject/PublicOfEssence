@@ -1,3 +1,5 @@
+"use client";
+
 import AutoPlayAudio from "../../Components/AutoPlayAudio";
 import {
   ContainerFooter,
@@ -16,7 +18,7 @@ function Footer() {
   return (
     <div>
       <ContainerFooter>
-        <LogoImage src={essenceLogo} alt="Logo Image in Fotter" />
+        <LogoImage src={essenceLogo.src} alt="Logo Image in Fotter" />
 
         <WrapperFotter>
           <WrapperFooterLeft>
