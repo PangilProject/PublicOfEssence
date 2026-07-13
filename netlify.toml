@@ -3,6 +3,10 @@
   command = "npm run build"
   publish = "out"
 
+[build.environment]
+  # Next.js 16은 Node 20.9+ 필수 — Netlify 기본(18)로는 빌드 실패
+  NODE_VERSION = "22"
+
 # Next.js 정적 번들은 파일명에 해시가 포함되므로 영구 캐시 가능
 [[headers]]
   for = "/_next/static/*"
