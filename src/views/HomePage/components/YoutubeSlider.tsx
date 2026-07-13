@@ -8,7 +8,12 @@ import { Button } from "../styles/slider.styles";
 
 const videoIds = ["zY_7snBXJ6o", "Kph6OMHaFjk", "-IcynLgzh-s"];
 
-export default function YouTubeSlider() {
+interface YouTubeSliderProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function YouTubeSlider({ title, subtitle }: YouTubeSliderProps) {
   const playerRefs = useRef<Record<number, YouTubePlayer>>({});
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -76,17 +81,24 @@ export default function YouTubeSlider() {
         {">"}
       </Button>
 
-      <DotList>
-        {videoIds.map((videoId, index) => (
-          <Dot
-            key={videoId}
-            type="button"
-            aria-label={`${index + 1}번째 영상으로 이동`}
-            $active={index === selectedIndex}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
-      </DotList>
+      {/* 영상 아래 검은 띠 — 타이틀과 dots를 배치해 영상을 가리지 않는다 */}
+      <CaptionBar>
+        <div>
+          {title && <CaptionTitle>{title}</CaptionTitle>}
+          {subtitle && <CaptionSub>{subtitle}</CaptionSub>}
+        </div>
+        <DotList>
+          {videoIds.map((videoId, index) => (
+            <Dot
+              key={videoId}
+              type="button"
+              aria-label={`${index + 1}번째 영상으로 이동`}
+              $active={index === selectedIndex}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
+        </DotList>
+      </CaptionBar>
     </Container>
   );
 }
@@ -94,6 +106,7 @@ export default function YouTubeSlider() {
 const Container = styled.div`
   width: 100%;
   position: relative;
+  background-color: #111;
 `;
 
 const Viewport = styled.div`
@@ -125,11 +138,37 @@ const VideoWrapper = styled.div`
   }
 `;
 
+const CaptionBar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+`;
+
+/* 이미지 슬라이더의 SliderCaption과 동일한 텍스트 스타일 */
+const CaptionTitle = styled.h2`
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+
+  @media (min-width: 1000px) {
+    font-size: 24px;
+  }
+`;
+
+const CaptionSub = styled.p`
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.8);
+`;
+
 const DotList = styled.div`
   display: flex;
-  justify-content: center;
   gap: 8px;
-  margin-top: 12px;
+  flex-shrink: 0;
 `;
 
 const Dot = styled.button<{ $active: boolean }>`
@@ -139,6 +178,7 @@ const Dot = styled.button<{ $active: boolean }>`
   border: none;
   padding: 0;
   cursor: pointer;
-  background-color: ${(props) => (props.$active ? "#333" : "#c4c4c4")};
+  background-color: ${(props) =>
+    props.$active ? "white" : "rgba(255, 255, 255, 0.35)"};
   transition: background-color 0.3s ease;
 `;

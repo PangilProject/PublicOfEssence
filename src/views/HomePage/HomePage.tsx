@@ -9,8 +9,14 @@ function HomePage() {
   return (
     <Container100P100P>
       <SectionStack>
-        <ImageSlider />
-        <YouTubeSlider />
+        <ImageSlider
+          title="제11회 집회 '함께가자'"
+          subtitle="11TH WORSHIP · PHOTO"
+        />
+        <YouTubeSlider
+          title="10주년 감사예배 실황"
+          subtitle="10TH ANNIVERSARY · LIVE WORSHIP"
+        />
       </SectionStack>
     </Container100P100P>
   );

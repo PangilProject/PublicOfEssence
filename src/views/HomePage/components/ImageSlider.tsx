@@ -7,8 +7,14 @@ import Fade from "embla-carousel-fade";
 import styled from "styled-components";
 import { slideImages } from "../constants";
 import { Button, ContainerIntroImage, IntroImage } from "../styles/slider.styles";
+import SliderCaption from "./SliderCaption";
 
-function ImageSlider() {
+interface ImageSliderProps {
+  title?: string;
+  subtitle?: string;
+}
+
+function ImageSlider({ title, subtitle }: ImageSliderProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Fade(),
     Autoplay({ delay: 5000, stopOnInteraction: false }),
@@ -33,6 +39,7 @@ function ImageSlider() {
 
   return (
     <ContainerIntroImage>
+      {title && subtitle && <SliderCaption title={title} subtitle={subtitle} />}
       <Viewport ref={emblaRef}>
         <SlideTrack>
           {slideImages.map((src, index) => (
@@ -84,12 +91,11 @@ const Slide = styled.div`
 
 const DotList = styled.div`
   position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 24px;
+  right: 20px;
   display: flex;
   gap: 8px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const Dot = styled.button<{ $active: boolean }>`
