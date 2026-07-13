@@ -1,38 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import Modal from "../../Layout/Modal/Modal";
+import styled from "styled-components";
 import ImageSlider from "./components/ImageSlider";
 import { Container100P100P } from "../../Components/BaseContainer";
 import YouTubeSlider from "./components/YoutubeSlider";
-import HeroSection from "./components/HeroSection/HeroSection";
-
-import WorshipPosterSlider from "./components/WorshipPosterSlider/WorshipPosterSlider";
 
 function HomePage() {
-  const [modalVisible, setModalVisible] = useState(true);
-
-  const closeModal = () => {
-    setModalVisible(false);
-  };
-
   return (
     <Container100P100P>
-      {modalVisible && (
-        <Modal
-          visible={modalVisible}
-          closable={true}
-          maskClosable={true}
-          onClose={closeModal}
-        ></Modal>
-      )}
-      <ImageSlider />
-      <HeroSection words={["주일 예배 실황", "LIVE WORSHIP"]} />
-      <YouTubeSlider />
-      <HeroSection words={["총 11번의 집회", "11 POWERFUL WORSHIP"]} />
-      <WorshipPosterSlider />
+      <SectionStack>
+        <ImageSlider />
+        <YouTubeSlider />
+      </SectionStack>
     </Container100P100P>
   );
 }
+
+// 섹션 사이 수직 여백
+const SectionStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: 1000px) {
+    gap: 80px;
+  }
+`;
 
 export default HomePage;
