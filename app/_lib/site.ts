@@ -9,7 +9,7 @@ export const DEFAULT_DESCRIPTION =
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/profile.php?id=100064473554394",
   youtube: "https://www.youtube.com/channel/UCwzG4MH4hI9GUm9iJcq0sLQ",
-  instagram: "https://www.instagram.com/essence_2016/",
+  instagram: "https://www.instagram.com/essence_2015/",
   linktree: "https://linktr.ee/ESSENCE_since2016",
 };
 
