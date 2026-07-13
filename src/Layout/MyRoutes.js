@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import LayoutOutlet from "./LayoutOutlet";
-import ResourcePage from "../Pages/ResourcePage/ResourcePage";
+import ResourcePage from "../views/ResourcePage/ResourcePage";
 
-const HomePage = lazy(() => import("../Pages/HomePage/HomePage"));
-const AboutPage = lazy(() => import("../Pages/AboutPage/AboutPage"));
-const WorshipPage = lazy(() => import("../Pages/WorshipPage/WorshipPage"));
-const ContactPage = lazy(() => import("../Pages/ContactPage/ContactPage"));
-const SchedulePage = lazy(() => import("../Pages/SchedulePage/SchedulePage"));
+const HomePage = lazy(() => import("../views/HomePage/HomePage"));
+const AboutPage = lazy(() => import("../views/AboutPage/AboutPage"));
+const WorshipPage = lazy(() => import("../views/WorshipPage/WorshipPage"));
+const ContactPage = lazy(() => import("../views/ContactPage/ContactPage"));
+const SchedulePage = lazy(() => import("../views/SchedulePage/SchedulePage"));
 
 function MyRoutes() {
   return (
