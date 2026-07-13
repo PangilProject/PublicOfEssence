@@ -50,8 +50,7 @@ function Footer() {
       </TopRow>
 
       <BottomRow>
-        ⓒ {currentYear} ESSENCE(에센스, 시흥시 다음세대 기도모임). All rights
-        reserved.
+        ⓒ {currentYear} ESSENCE(에센스). All rights reserved.
       </BottomRow>
     </ContainerFooter>
   );

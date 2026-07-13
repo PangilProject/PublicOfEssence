@@ -17,7 +17,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ESSENCE",
-  alternateName: ["에센스", "시흥시 다음세대 기도모임"],
+  alternateName: ["에센스"],
   url: SITE_URL,
   logo: `${SITE_URL}/Img/Essence_Logo_Black_Red.png`,
   description: DEFAULT_DESCRIPTION,

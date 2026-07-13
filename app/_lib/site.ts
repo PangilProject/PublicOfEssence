@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://essence2016.netlify.app";
 export const SITE_NAME = "ESSENCE";
-export const DEFAULT_TITLE = "Essence — 시흥시 다음세대 기도모임";
+export const DEFAULT_TITLE = "ESSENCE(에센스)";
 export const DEFAULT_DESCRIPTION =
-  "ESSENCE(에센스)는 경기도 시흥시 중·고등학교 기도모임에서 시작된 선교단체입니다. 그리스도인의 본질을 기억하며 다음세대와 함께 예배합니다.";
+  "ESSENCE(에센스)는 시흥시 다음세대의 복음화를 위해 청년과 청소년이 모인 사역 단체입니다. 학교와 일상에 십자가를 세우는 세대를 세워갑니다.";
 
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/profile.php?id=100064473554394",
