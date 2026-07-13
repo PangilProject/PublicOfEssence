@@ -51,10 +51,10 @@ function ImageSlider({ title, subtitle }: ImageSliderProps) {
       </Viewport>
 
       <Button onClick={scrollPrev} aria-label="이전 이미지">
-        {"<"}
+        {"‹"}
       </Button>
       <Button onClick={scrollNext} aria-label="다음 이미지">
-        {">"}
+        {"›"}
       </Button>
 
       <DotList>

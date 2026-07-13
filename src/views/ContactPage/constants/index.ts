@@ -39,7 +39,7 @@ export const ContactList: ContactInfo[] = [
       },
       {
         label: "후원 계좌",
-        value: "3333378490863 (카카오뱅크 김광일)",
+        value: "3333-37-8490863 (카카오뱅크 김광일)",
       },
     ],
   },

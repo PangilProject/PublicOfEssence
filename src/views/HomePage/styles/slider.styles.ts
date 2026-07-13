@@ -26,21 +26,29 @@ export const Button = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
   border: none;
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
-  z-index: 1;
-  font-size: 24px;
-  font-weight: bold;
+  z-index: 2;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
   }
   &:first-of-type {
-    left: 10px;
+    left: 16px;
   }
   &:last-of-type {
-    right: 10px;
+    right: 16px;
   }
 `;

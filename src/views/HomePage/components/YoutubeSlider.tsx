@@ -75,10 +75,10 @@ export default function YouTubeSlider({ title, subtitle }: YouTubeSliderProps) {
       </Viewport>
 
       <Button onClick={scrollPrev} aria-label="이전 영상">
-        {"<"}
+        {"‹"}
       </Button>
       <Button onClick={scrollNext} aria-label="다음 영상">
-        {">"}
+        {"›"}
       </Button>
 
       {/* 영상 아래 검은 띠 — 타이틀과 dots를 배치해 영상을 가리지 않는다 */}
