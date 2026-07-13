@@ -70,3 +70,28 @@ export const ContactDetailLabel = styled.strong`
   min-width: 70px;
   font-weight: 600;
 `;
+
+export const CopyTrigger = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: inherit;
+  color: black;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: #ff6347;
+  }
+`;
+
+export const CopiedBadge = styled.span`
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff6347;
+`;

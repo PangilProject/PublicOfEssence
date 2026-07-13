@@ -1,6 +1,5 @@
 "use client";
 
-import AutoPlayAudio from "../../Components/AutoPlayAudio";
 import {
   ContainerFooter,
   FooterP,
@@ -16,8 +15,7 @@ import essenceLogo from "../../assets/images/EssenceLogo.png";
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div>
-      <ContainerFooter>
+    <ContainerFooter>
         <LogoImage src={essenceLogo.src} alt="Logo Image in Fotter" />
 
         <WrapperFotter>
@@ -51,11 +49,8 @@ function Footer() {
               <OutsideLink>Instagram</OutsideLink>
             </a>
           </WrapperFooterRight>
-        </WrapperFotter>
-      </ContainerFooter>
-
-      <AutoPlayAudio />
-    </div>
+      </WrapperFotter>
+    </ContainerFooter>
   );
 }
 export default Footer;

@@ -3,6 +3,8 @@ export interface ContactDetail {
   value: string;
   /** 있으면 클릭 가능한 링크로 렌더 (tel:, mailto: 등) */
   href?: string;
+  /** 있으면 클릭 시 이 값을 클립보드에 복사 (복사 아이콘 표시) */
+  copyValue?: string;
 }
 
 export interface ContactInfo {
@@ -40,6 +42,7 @@ export const ContactList: ContactInfo[] = [
       {
         label: "후원 계좌",
         value: "3333-37-8490863 (카카오뱅크 김광일)",
+        copyValue: "3333378490863",
       },
     ],
   },
