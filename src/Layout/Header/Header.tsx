@@ -24,12 +24,16 @@ import essenceLogoRed from "../../assets/images/EssenceLogoRed.png";
 import essenceLogo from "../../assets/images/EssenceLogo.png";
 
 const MENU = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/worship", label: "Worship" },
   { href: "/schedule", label: "Schedule" },
   { href: "/resource", label: "Resource" },
   { href: "/contact", label: "Contact" },
 ];
+
+const isActive = (href: string, pathname: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
 
 function Header() {
   const [hovered, setHovered] = useState(false);
@@ -94,18 +98,11 @@ function Header() {
           </OverlayTop>
 
           <OverlayList>
-            <OverlayLink
-              href="/"
-              $active={pathname === "/"}
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </OverlayLink>
             {MENU.map((item) => (
               <OverlayLink
                 key={item.href}
                 href={item.href}
-                $active={pathname.startsWith(item.href)}
+                $active={isActive(item.href, pathname)}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}

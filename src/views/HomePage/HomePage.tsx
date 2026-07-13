@@ -16,8 +16,7 @@ function HomePage() {
         <MissionSection data-section="mission">
           <MissionKicker>WHO WE ARE</MissionKicker>
           <MissionTitle>
-            시흥시 다음세대의 복음화를 위해{" "}
-            <DesktopBr />
+            시흥시 다음세대의 복음화를 위해 <DesktopBr />
             청년과 청소년이 모인 사역 단체
           </MissionTitle>
           <VisionList>
@@ -58,13 +57,15 @@ function HomePage() {
               </TimelineItem>
             ))}
           </TimelineList>
-          <MoreLink href="/worship">집회 기록 전체 보기 →</MoreLink>
+          <MoreLink href="/worship">역대 집회 보기 →</MoreLink>
         </TimelineSection>
 
         {/* ⑥ CTA 밴드 */}
         <CtaSection data-section="cta">
           <CtaTitle>ESSENCE와 함께해요</CtaTitle>
-          <CtaDesc>예배 실황과 소식은 SNS에서, 사역은 후원으로 함께할 수 있습니다.</CtaDesc>
+          <CtaDesc>
+            예배 실황과 소식은 SNS에서, 사역은 후원으로 함께할 수 있습니다.
+          </CtaDesc>
           <CtaButtons>
             <CtaButton
               href={SOCIAL_LINKS.youtube}
@@ -272,7 +273,9 @@ const CtaButton = styled.a`
   font-weight: 500;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     background-color: white;
