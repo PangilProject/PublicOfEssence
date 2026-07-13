@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import StyledComponentsRegistry from "./_lib/registry";
 import SiteLayout from "@/Layout/SiteLayout";
