@@ -1,11 +1,13 @@
 export interface AboutSection {
   question: string;
+  subtitle: string;
   answers: string[];
 }
 
 export const aboutContent: AboutSection[] = [
   {
     question: "소개",
+    subtitle: "INTRODUCTION",
     answers: [
       "‘ESSENCE’는 ‘본질’이라는 이름의 의미처럼 하나님을 사랑하고 이웃을 사랑하며 복음을 전하는, 그리스도인의 본질을 기억하고 살아가기 위해 세워진 선교단체입니다.",
       "ESSENCE는 2015년 무렵 시흥시 관내 중·고등학교에서 모이던 기도모임이 ‘ESSENCE(에센스)’라는 이름으로 함께 모이면서 시작되었습니다. 청소년기의 삶의 현장인 학교 안에서 믿음을 가진 친구들이 함께 교제하고 예배하며 신앙을 지켜가기 위한 공동체로 세워졌습니다.",
@@ -15,6 +17,7 @@ export const aboutContent: AboutSection[] = [
   },
   {
     question: "사역",
+    subtitle: "MINISTRY",
     answers: [
       "ESSENCE는 예배와 선교, 그리고 학원 복음화를 중심으로 사역하고 있습니다. 매년 1월 한 해의 주제와 말씀을 나누는 집회를 시작으로, 이후 격달로 정기 예배를 드리며 하나님께 나아가고 있습니다.",
       "또한 자체 수련회를 진행하거나 교회 수련회와 예배를 섬기며 선교적 사명을 감당하고 있습니다. 이러한 사역을 통해 공동체 안에서 예배와 섬김, 복음 전파의 삶을 함께 실천하고 있습니다.",
@@ -23,6 +26,7 @@ export const aboutContent: AboutSection[] = [
   },
   {
     question: "비전",
+    subtitle: "VISION",
     answers: [
       "ESSENCE는 그리스도인의 본질을 잃지 않고 살아가기를 소망하는 청소년과 청년들이 함께 예배하며 믿음의 정체성을 세워가는 공동체입니다.",
       "우리는 예배 가운데 하나님을 바라보며 그리스도인으로서의 정체성을 확립하고, 각자의 삶의 자리인 학교와 직장, 가정에서 십자가의 삶을 살아가고자 합니다.",

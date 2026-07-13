@@ -16,20 +16,17 @@ function ImageDownloadButton({ filePath, fileName }: ImageDownloadButtonProps) {
 }
 
 const DownloadButton = styled.a`
+  padding: 8px 20px;
+  border-radius: 999px;
+  background-color: #111;
   color: white;
-  background-color: cornflowerblue;
   text-decoration: none;
-  padding: 4px 8px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.2rem;
-  font-size: 12px;
-  height: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    opacity: 0.8;
+    background-color: #ff6347;
   }
 `;
 
