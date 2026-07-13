@@ -1,0 +1,10 @@
+# Netlify 빌드 설정 — UI 설정보다 우선 적용됨
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Next.js 정적 번들은 파일명에 해시가 포함되므로 영구 캐시 가능
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
