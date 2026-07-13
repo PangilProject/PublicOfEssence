@@ -5,12 +5,26 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import StyledComponentsRegistry from "./_lib/registry";
 import SiteLayout from "@/Layout/SiteLayout";
+import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION } from "./_lib/site";
 
-// 페이지별 세부 metadata는 Phase 4에서 확장
 export const metadata: Metadata = {
-  metadataBase: new URL("https://essenceworship.netlify.app"),
-  title: "Essence",
-  description: "경기도 시흥시 고등학교 기독교 동아리 연합 Essence 공식 사이트",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s | Essence",
+  },
+  description: DEFAULT_DESCRIPTION,
+  keywords: [
+    "ESSENCE",
+    "에센스",
+    "시흥시",
+    "기도모임",
+    "다음세대",
+    "예배",
+    "선교단체",
+    "학교 기도모임",
+  ],
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
