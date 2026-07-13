@@ -62,7 +62,7 @@ const ContainerFooter = styled.footer`
   }
   width: 100%;
 
-  height: 100px;
+  height: auto;
 `;
 
 export default SiteLayout;

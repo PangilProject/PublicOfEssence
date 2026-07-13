@@ -23,14 +23,7 @@ import {
 import essenceLogoRed from "../../assets/images/EssenceLogoRed.png";
 import essenceLogo from "../../assets/images/EssenceLogo.png";
 
-const MENU = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/worship", label: "Worship" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/resource", label: "Resource" },
-  { href: "/contact", label: "Contact" },
-];
+import { MENU } from "../menu";
 
 const isActive = (href: string, pathname: string) =>
   href === "/" ? pathname === "/" : pathname.startsWith(href);
