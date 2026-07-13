@@ -40,6 +40,11 @@ const ContainerHeader = styled.header`
   width: 100%;
 
   height: 80px;
+
+  /* 모바일: 로고(50px 컨테이너)에 맞춰 상단 여백 축소 */
+  @media (max-width: 600px) {
+    height: 50px;
+  }
 `;
 
 const ContainerMain = styled.main`

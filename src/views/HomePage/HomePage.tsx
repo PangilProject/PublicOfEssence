@@ -104,6 +104,10 @@ const SectionStack = styled.div`
 /* ① 미션 스테이트먼트 */
 const MissionSection = styled.section`
   padding: 24px 0 8px;
+
+  @media (max-width: 600px) {
+    padding-top: 4px;
+  }
 `;
 
 const MissionKicker = styled.p`
