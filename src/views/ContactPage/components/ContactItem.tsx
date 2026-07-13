@@ -5,7 +5,9 @@ import {
   ContainerContactItem,
   ContactTitle,
   ContactSubTitle,
-  ContactEmail,
+  ContactHr,
+  ContactDetailRow,
+  ContactDetailLabel,
 } from "../styles";
 
 function ContactItem({ item }: { item: ContactInfo }) {
@@ -13,7 +15,13 @@ function ContactItem({ item }: { item: ContactInfo }) {
     <ContainerContactItem>
       <ContactTitle>{item.title}</ContactTitle>
       <ContactSubTitle>{item.subtitle}</ContactSubTitle>
-      <ContactEmail>{item.email}</ContactEmail>
+      <ContactHr />
+      {item.details.map((detail) => (
+        <ContactDetailRow key={detail.label + detail.value}>
+          <ContactDetailLabel>{detail.label}</ContactDetailLabel>
+          {detail.href ? <a href={detail.href}>{detail.value}</a> : detail.value}
+        </ContactDetailRow>
+      ))}
     </ContainerContactItem>
   );
 }

@@ -4,15 +4,22 @@ import styled from "styled-components";
 
 export const ContainerMenu = styled.div`
   width: 100%;
-  height: 150px;
 
   display: flex;
+  gap: 40px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 `;
 
 export const ContainerContactItem = styled.div`
-  width: 50%;
-  height: 100%;
+  flex: 1;
   box-sizing: border-box;
+  padding: 24px;
+  border: 1.5px solid #36363650;
+  border-radius: 20px;
 
   display: flex;
   flex-direction: column;
@@ -24,15 +31,42 @@ export const ContactTitle = styled.p`
 `;
 
 export const ContactSubTitle = styled.p`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 200;
-  color: #333;
-  margin-top: 40px;
+  color: #666;
+  margin-top: 4px;
 `;
 
-export const ContactEmail = styled.p`
+export const ContactHr = styled.hr`
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 16px 0;
+`;
+
+export const ContactDetailRow = styled.p`
   font-size: 15px;
   font-weight: 300;
 
-  margin-top: 10px;
+  margin-top: 8px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  & > a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: #ff6347;
+    }
+  }
+`;
+
+export const ContactDetailLabel = styled.strong`
+  display: inline-block;
+  min-width: 70px;
+  font-weight: 600;
 `;
