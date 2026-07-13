@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://essenceworship.netlify.app";
+export const SITE_URL = "https://essence2016.netlify.app";
 export const SITE_NAME = "ESSENCE";
 export const DEFAULT_TITLE = "Essence — 시흥시 다음세대 기도모임";
 export const DEFAULT_DESCRIPTION =
