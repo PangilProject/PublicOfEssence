@@ -148,7 +148,7 @@ const CaptionBar = styled.div`
 
 /* 이미지 슬라이더의 SliderCaption과 동일한 텍스트 스타일 */
 const CaptionTitle = styled.h2`
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
 
@@ -159,10 +159,14 @@ const CaptionTitle = styled.h2`
 
 const CaptionSub = styled.p`
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
   letter-spacing: 1.5px;
   color: rgba(255, 255, 255, 0.8);
+
+  @media (min-width: 1000px) {
+    font-size: 11px;
+  }
 `;
 
 const DotList = styled.div`

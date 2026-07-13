@@ -16,8 +16,8 @@ function HomePage() {
         <MissionSection data-section="mission">
           <MissionKicker>WHO WE ARE</MissionKicker>
           <MissionTitle>
-            시흥시 다음세대의 복음화를 위해
-            <br />
+            시흥시 다음세대의 복음화를 위해{" "}
+            <DesktopBr />
             청년과 청소년이 모인 사역 단체
           </MissionTitle>
           <VisionList>
@@ -115,12 +115,22 @@ const MissionKicker = styled.p`
 
 const MissionTitle = styled.h2`
   margin-top: 12px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1.35;
+  word-break: keep-all;
 
   @media (min-width: 1000px) {
     font-size: 40px;
+  }
+`;
+
+// 모바일에서는 자연 줄바꿈, 데스크톱에서만 의도된 두 줄
+const DesktopBr = styled.br`
+  display: none;
+
+  @media (min-width: 1000px) {
+    display: inline;
   }
 `;
 
