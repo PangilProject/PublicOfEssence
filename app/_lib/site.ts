@@ -4,7 +4,7 @@ export const SITE_URL = "https://essence2016.netlify.app";
 export const SITE_NAME = "ESSENCE";
 export const DEFAULT_TITLE = "ESSENCE(에센스)";
 export const DEFAULT_DESCRIPTION =
-  "ESSENCE(에센스)는 시흥시 다음세대의 복음화를 위해 청년과 청소년이 모인 사역 단체입니다. 학교와 일상에 십자가를 세우는 세대를 세워갑니다.";
+  "ESSENCE는 예배자라는 본질을 지키는 그리스도인으로 세워지길 소망하며 함께 예배하는 선교단체입니다. 학교와 일상에 십자가를 세우는 세대를 세워갑니다.";
 
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/profile.php?id=100064473554394",
