@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import styled from "styled-components";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import ScrollToTopButton from "../Components/ScrollToTopButton";
 
 /** 기존 LayoutOutlet을 대체 — 모든 페이지 공통 셸 (react-router Outlet → children) */
 function SiteLayout({ children }: { children: ReactNode }) {
@@ -18,6 +19,8 @@ function SiteLayout({ children }: { children: ReactNode }) {
       <ContainerFooter>
         <Footer />
       </ContainerFooter>
+
+      <ScrollToTopButton />
     </ContainerSiteLayout>
   );
 }
