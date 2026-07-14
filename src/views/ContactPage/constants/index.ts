@@ -19,11 +19,6 @@ export const ContactList: ContactInfo[] = [
     subtitle: "General Inquiry",
     details: [
       {
-        label: "phone",
-        value: "010-2076-6032 (예배팀장 오예림)",
-        href: "tel:010-2076-6032",
-      },
-      {
         label: "email",
         value: "essence.worship.2016@gmail.com",
         href: "mailto:essence.worship.2016@gmail.com",
