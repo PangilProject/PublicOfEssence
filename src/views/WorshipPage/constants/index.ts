@@ -1,5 +1,11 @@
 import { cldImage } from "../../../../app/_lib/cloudinary";
 
+export interface EventPhoto {
+  /** Cloudinary public ID */
+  id: string;
+  alt: string;
+}
+
 export interface WorshipInfo {
   count: number;
   date: string;
@@ -9,6 +15,12 @@ export interface WorshipInfo {
   image_alt: string;
   description: string;
   topic: string;
+  /** 집회 주제 성구 — 있으면 상세 페이지에 인용 블록으로 표시 */
+  verse?: { text: string; reference: string };
+  /** 상세 페이지 소개 문단 — 없으면 description을 사용 */
+  story?: string[];
+  /** 현장 사진 (Cloudinary ID) — 없으면 사진 섹션 미표시 */
+  photos?: EventPhoto[];
 }
 
 export const worshipList: WorshipInfo[] = [
@@ -132,5 +144,10 @@ export const worshipList: WorshipInfo[] = [
     description:
       "‘함께’의 가치가 흐려지는 시대에서 하나님께서 말씀하신 ‘함께’의 의미를 세우는 세대, 함께 모여 예수님께 가는 세대를 꿈꿉니다.",
     topic: "함께가자",
+    photos: [
+      { id: "banner-1", alt: "11차 집회 단체 사진" },
+      { id: "banner-2", alt: "11차 집회 찬양 실황" },
+      { id: "banner-3", alt: "11차 집회 현장" },
+    ],
   },
 ];

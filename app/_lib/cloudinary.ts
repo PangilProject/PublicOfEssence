@@ -13,6 +13,14 @@ export function cldImage(publicId: string, width?: number): string {
 }
 
 /**
+ * 갤러리 썸네일 URL. 원본 비율이 제각각이어도 4:3으로 중앙 크롭해
+ * 그리드가 균일하게 유지되도록 한다.
+ */
+export function cldThumb(publicId: string, width: number): string {
+  return `${UPLOAD_BASE}/f_auto,q_auto,w_${width},ar_4:3,c_fill/${publicId}`;
+}
+
+/**
  * 강제 다운로드 URL. <a download>는 크로스 오리진에서 무시되므로
  * Cloudinary의 fl_attachment로 Content-Disposition을 지정한다.
  */

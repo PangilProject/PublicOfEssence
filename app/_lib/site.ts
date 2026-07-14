@@ -19,6 +19,8 @@ interface PageMetadataInput {
   description: string;
   /** 라우트 경로 (예: "/about") — canonical과 og:url에 사용 */
   path: string;
+  /** OG 이미지 절대 URL — 생략하면 기본 /og-image.jpg 사용 */
+  image?: string;
 }
 
 /**
@@ -30,9 +32,13 @@ export function buildPageMetadata({
   title,
   description,
   path,
+  image,
 }: PageMetadataInput): Metadata {
   const canonical = path === "/" ? "/" : `${path}/`;
   const ogTitle = title ? `${title} | Essence` : DEFAULT_TITLE;
+  const ogImages = image
+    ? [{ url: image, alt: ogTitle }]
+    : [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "ESSENCE 로고" }];
 
   return {
     ...(title ? { title } : {}),
@@ -45,20 +51,13 @@ export function buildPageMetadata({
       url: canonical,
       title: ogTitle,
       description,
-      images: [
-        {
-          url: "/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: "ESSENCE 로고",
-        },
-      ],
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description,
-      images: ["/og-image.jpg"],
+      images: [image ?? "/og-image.jpg"],
     },
   };
 }

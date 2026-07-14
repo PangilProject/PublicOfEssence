@@ -22,7 +22,7 @@ interface WorshipItemProps {
 
 function WorshipItem({ item }: WorshipItemProps) {
   return (
-    <WorshipInfoItem>
+    <WorshipInfoItem href={`/worship/${item.count}/`}>
       <HoverInfo $color="white">
         <WorshipData>일자 | {item?.date}</WorshipData>
         <WorshipPlace>장소 | {item?.place}</WorshipPlace>

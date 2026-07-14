@@ -1,6 +1,10 @@
 import { cldImage } from "../../../../app/_lib/cloudinary";
 
+import type { EventPhoto } from "../../WorshipPage/constants";
+
 export interface ScheduleInfo {
+  /** 상세 페이지 URL 경로 (/schedule/[slug]) */
+  slug: string;
   title: string;
   date: string;
   place: string;
@@ -10,10 +14,14 @@ export interface ScheduleInfo {
   image_alt: string;
   description: string;
   topic: string;
+  verse?: { text: string; reference: string };
+  story?: string[];
+  photos?: EventPhoto[];
 }
 
 export const scheduleList: ScheduleInfo[] = [
   {
+    slug: "2024-summer-camp",
     title: "2024 여름 수련회",
     date: "2024.07.23 ~ 07.24",
     place: "나무들의 집 (인천 강화군 선원면 시리미로 42번길 55)",

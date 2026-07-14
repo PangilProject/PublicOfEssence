@@ -21,7 +21,7 @@ interface ScheduleItemProps {
 
 function ScheduleItem({ item }: ScheduleItemProps) {
   return (
-    <ScheduleInfoItem>
+    <ScheduleInfoItem href={`/schedule/${item.slug}/`}>
       <HoverInfo $color="white">
         <ScheduleTitle>{item?.topic}</ScheduleTitle>
         <Hr />

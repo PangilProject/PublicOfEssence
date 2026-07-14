@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
 
 export const ContainerWorshipList = styled.div`
@@ -23,7 +24,12 @@ export const HoverInfo = styled(ItemInfo)`
 
 export const DefaultInfo = styled(ItemInfo)``;
 
-export const WorshipInfoItem = styled.div`
+// 카드 전체가 상세 페이지로 가는 링크 — nth-child 여백 규칙이 유지되도록
+// 래퍼를 두지 않고 카드 자체를 Link로 만든다
+export const WorshipInfoItem = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
   width: 300px;
   height: 400px;
   border-radius: 20px;
