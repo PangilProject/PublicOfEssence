@@ -17,12 +17,9 @@ import emptyImage from "../../../assets/images/Image404.png";
 
 interface ScheduleItemProps {
   item: ScheduleInfoType;
-  imageExists: Record<string, boolean>;
 }
 
-function ScheduleItem({ item, imageExists }: ScheduleItemProps) {
-  const hasImage = item?.image && imageExists[item.image];
-
+function ScheduleItem({ item }: ScheduleItemProps) {
   return (
     <ScheduleInfoItem>
       <HoverInfo $color="white">
@@ -42,8 +39,11 @@ function ScheduleItem({ item, imageExists }: ScheduleItemProps) {
       <DefaultInfo $color="black">
         <WorshipCount>{item?.title}</WorshipCount>
         <WorshipImage
-          src={hasImage ? item.image : emptyImage.src}
+          src={item?.image || emptyImage.src}
           alt={item?.image_alt || "schedule_poster"}
+          onError={(e) => {
+            e.currentTarget.src = emptyImage.src;
+          }}
         />
       </DefaultInfo>
     </ScheduleInfoItem>

@@ -3,19 +3,16 @@
 import { Container100P100P } from "../../Components/BaseContainer";
 import PageHero from "../../Components/PageHero";
 import { scheduleList } from "./constants";
-import { useImageCheck } from "../../hooks/useImageCheck";
 import ScheduleItem from "./components/ScheduleItem";
 import { ContainerscheduleList } from "./styles";
 
 function SchedulePage() {
-  const imageExists = useImageCheck(scheduleList);
-
   return (
     <Container100P100P>
       <PageHero kicker="SCHEDULE" title="예배와 수련회 일정" />
       <ContainerscheduleList>
         {scheduleList.map((item, index) => (
-          <ScheduleItem key={index} item={item} imageExists={imageExists} />
+          <ScheduleItem key={index} item={item} />
         ))}
       </ContainerscheduleList>
     </Container100P100P>

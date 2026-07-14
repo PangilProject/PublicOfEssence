@@ -18,12 +18,9 @@ import emptyImage from "../../../assets/images/Image404.png";
 
 interface WorshipItemProps {
   item: WorshipInfo;
-  imageExists: Record<string, boolean>;
 }
 
-function WorshipItem({ item, imageExists }: WorshipItemProps) {
-  const hasImage = item?.image && imageExists[item.image];
-
+function WorshipItem({ item }: WorshipItemProps) {
   return (
     <WorshipInfoItem>
       <HoverInfo $color="white">
@@ -39,8 +36,11 @@ function WorshipItem({ item, imageExists }: WorshipItemProps) {
       <DefaultInfo $color="black">
         <WorshipCount>{item?.count}회</WorshipCount>
         <WorshipImage
-          src={hasImage ? item.image : emptyImage.src}
+          src={item?.image || emptyImage.src}
           alt={item?.image_alt || "worship_poster"}
+          onError={(e) => {
+            e.currentTarget.src = emptyImage.src;
+          }}
         />
       </DefaultInfo>
     </WorshipInfoItem>
