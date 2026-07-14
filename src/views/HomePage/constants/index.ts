@@ -1,5 +1,8 @@
-import banner1 from "../../../assets/images/worship/banner1.jpeg";
-import banner2 from "../../../assets/images/worship/banner2.jpg";
-import banner3 from "../../../assets/images/worship/banner3.jpg";
+import { cldImage } from "../../../../app/_lib/cloudinary";
 
-export const slideImages: string[] = [banner1.src, banner2.src, banner3.src];
+// 홈 히어로 슬라이더는 화면 폭 전체를 채우므로 넉넉한 폭으로 전송
+export const slideImages: string[] = [
+  cldImage("banner-1", 1600),
+  cldImage("banner-2", 1600),
+  cldImage("banner-3", 1600),
+];

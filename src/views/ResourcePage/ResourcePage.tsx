@@ -15,9 +15,9 @@ import {
   Overlay,
   ModalImage,
 } from "./styles/ResourceTitle";
+import { cldImage, cldDownload } from "../../../app/_lib/cloudinary";
 
-// trailingSlash 환경에서 상대 경로("Img/...")는 /resource/Img/... 로 깨지므로 절대 경로 사용
-const NOTE_IMAGE_PATH = "/Img/설교노트v1.png";
+const NOTE_IMAGE_ID = "sermon-note-v1";
 
 function ResourcePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ function ResourcePage() {
       <CardGrid>
         <ResourceCard>
           <ThumbWrapper onClick={() => setIsOpen(true)}>
-            <Thumb src={NOTE_IMAGE_PATH} alt="설교노트v1 미리보기" />
+            <Thumb src={cldImage(NOTE_IMAGE_ID, 800)} alt="설교노트v1 미리보기" />
           </ThumbWrapper>
           <CardBody>
             <ResourceTitle>설교노트 v1</ResourceTitle>
@@ -37,7 +37,7 @@ function ResourcePage() {
               적용하며, 기도와 삶 속에서 사용하실 수 있게 돕는 자료입니다.
             </ResourceDesc>
             <ImageDownloadButton
-              filePath={NOTE_IMAGE_PATH}
+              filePath={cldDownload(NOTE_IMAGE_ID)}
               fileName="설교노트v1.png"
             />
           </CardBody>
@@ -47,7 +47,7 @@ function ResourcePage() {
       {isOpen && (
         <Overlay onClick={() => setIsOpen(false)}>
           <ModalImage
-            src={NOTE_IMAGE_PATH}
+            src={cldImage(NOTE_IMAGE_ID)}
             alt="설교노트v1 확대 이미지"
             onClick={(e) => e.stopPropagation()}
           />
