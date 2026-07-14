@@ -60,7 +60,9 @@ function Header() {
       <MenuItemList>
         {MENU.map((item) => (
           <MyLink key={item.href} href={item.href}>
-            <MenuItem>{item.label}</MenuItem>
+            <MenuItem $active={isActive(item.href, pathname)}>
+              {item.label}
+            </MenuItem>
           </MyLink>
         ))}
       </MenuItemList>

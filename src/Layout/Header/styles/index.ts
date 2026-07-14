@@ -33,13 +33,14 @@ export const MenuItemList = styled.nav`
   }
 `;
 
-export const MenuItem = styled.div`
+export const MenuItem = styled.div<{ $active?: boolean }>`
   @media (min-width: 1000px) {
     font-size: 20px;
   }
   text-align: right;
   font-size: 17px;
   font-weight: 500;
+  color: ${(props) => (props.$active ? "#ff6347" : "inherit")};
   transition: color 0.5s ease;
 
   margin-left: 30px;
