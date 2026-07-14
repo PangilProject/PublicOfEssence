@@ -27,3 +27,5 @@ yarn-error.log*
 _etc
 
 docs/
+
+*.tsbuildinfo
