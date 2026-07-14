@@ -65,8 +65,11 @@ function EventDetail({
 }: EventDetailProps) {
   return (
     <Container100P100P>
-      <BackLink href={backHref}>← {backLabel}</BackLink>
-      <PageHero kicker={kicker} title={title} />
+      <PageHero
+        kicker={kicker}
+        title={title}
+        aside={<BackLink href={backHref}>← {backLabel}</BackLink>}
+      />
 
       <DetailTop>
         <PosterCard>

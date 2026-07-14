@@ -7,13 +7,18 @@ interface PageHeroProps {
   /** 포인트 컬러 영문 라벨 (예: ABOUT ESSENCE) */
   kicker: string;
   title: ReactNode;
+  /** 킥커와 같은 줄 오른쪽 끝에 배치할 요소 (예: 뒤로가기 링크) */
+  aside?: ReactNode;
 }
 
 /** 서브 페이지 상단 공통 히어로 — 랜딩의 미션 섹션과 같은 디자인 언어 */
-function PageHero({ kicker, title }: PageHeroProps) {
+function PageHero({ kicker, title, aside }: PageHeroProps) {
   return (
     <Hero>
-      <Kicker>{kicker}</Kicker>
+      <KickerRow>
+        <Kicker>{kicker}</Kicker>
+        {aside}
+      </KickerRow>
       <Title>{title}</Title>
     </Hero>
   );
@@ -25,6 +30,13 @@ const Hero = styled.section`
   @media (min-width: 1000px) {
     padding: 24px 0 56px;
   }
+`;
+
+const KickerRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 `;
 
 const Kicker = styled.p`
