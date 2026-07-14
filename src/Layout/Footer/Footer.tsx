@@ -29,8 +29,8 @@ function Footer() {
         <Brand>
           <LogoImage src={essenceLogo.src} alt="ESSENCE 로고" />
           <BrandDesc>
-            시흥시 다음세대의 복음화를 위해 청년과 청소년이 모인 사역
-            단체입니다.
+            ESSENCE는 예배자라는 본질을 지키는 그리스도인으로 세워지길 소망하며
+            함께 예배하는 선교단체입니다
           </BrandDesc>
         </Brand>
 
