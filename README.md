@@ -5,8 +5,8 @@
 
 🔗 **Live:** https://essence2016.netlify.app
 
-<!-- 대표 스크린샷: docs/readme/hero.png 를 추가하면 아래 이미지가 표시됩니다 -->
-![ESSENCE 홈페이지](docs/readme/hero.png)
+<!-- 대표 스크린샷: .github/readme/hero.png 를 추가하면 아래 이미지가 표시됩니다 -->
+![ESSENCE 홈페이지](.github/readme/hero.png)
 
 ## 목차
 
@@ -21,15 +21,15 @@
 
 | 소개 (About) | 지난 집회 (Worship) |
 | --- | --- |
-| ![About](docs/readme/about.png) | ![Worship](docs/readme/worship.png) |
+| ![About](.github/readme/about.png) | ![Worship](.github/readme/worship.png) |
 
 | 일정 (Schedule) | 자료실 (Resource) |
 | --- | --- |
-| ![Schedule](docs/readme/schedule.png) | ![Resource](docs/readme/resource.png) |
+| ![Schedule](.github/readme/schedule.png) | ![Resource](.github/readme/resource.png) |
 
 | 문의·후원 (Contact) | 집회 상세 (Worship Detail) |
 | --- | --- |
-| ![Contact](docs/readme/contact.png) | ![Worship Detail](docs/readme/worship-detail.png) |
+| ![Contact](.github/readme/contact.png) | ![Worship Detail](.github/readme/worship-detail.png) |
 
 ## 기술 스택
 
@@ -68,7 +68,8 @@ src/                    # 뷰 & 재사용 컴포넌트
   Components/           # PageHero, EventDetail, PhotoGallery 등
 
 public/                 # 정적 자산 (favicon, 아이콘, og-image, manifest)
-docs/                   # 기획·마이그레이션 기록, README 이미지
+.github/readme/         # README용 스크린샷
+docs/                   # 기획·마이그레이션 기록 (git 미추적)
 ```
 
 ## 시작하기
