@@ -24,6 +24,17 @@ export const metadata: Metadata = {
     "학교 기도모임",
   ],
   manifest: "/manifest.json",
+  icons: {
+    // 구글 검색결과 파비콘은 48px 이상 정사각형 아이콘을 요구한다.
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/Img/icon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/Img/icon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/Img/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/Img/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/Img/icon-192.png", sizes: "192x192" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
