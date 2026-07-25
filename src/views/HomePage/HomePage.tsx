@@ -25,15 +25,15 @@ function HomePage() {
           <VisionList>
             <VisionItem>
               <VisionNumber>01</VisionNumber>
-              학교에 십자가를 세우는 세대
+              학교에 십자가를 세우는 예배자
             </VisionItem>
             <VisionItem>
               <VisionNumber>02</VisionNumber>
-              일상에 십자가를 세우는 세대
+              일상에 십자가를 세우는 예배자
             </VisionItem>
             <VisionItem>
               <VisionNumber>03</VisionNumber>
-              교회를 더욱 뜨겁게 섬기는 세대
+              교회를 더욱 뜨겁게 섬기는 예배자
             </VisionItem>
           </VisionList>
           <MoreLink href="/about">에센스 소개 보기 →</MoreLink>

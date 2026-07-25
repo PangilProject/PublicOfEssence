@@ -5,7 +5,7 @@ export const SITE_NAME = "ESSENCE";
 export const DEFAULT_TITLE = "ESSENCE(에센스)";
 // 네이버 서치어드바이저 권장: 설명문 80자 이내
 export const DEFAULT_DESCRIPTION =
-  "ESSENCE(에센스)는 예배자라는 본질을 지키며 함께 예배하는 시흥시 다음세대 선교단체입니다.";
+  "ESSENCE(에센스)는 예배자라는 본질을 지키며 함께 예배하는 선교단체입니다.";
 
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/profile.php?id=100064473554394",
