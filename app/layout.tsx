@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import StyledComponentsRegistry from "./_lib/registry";
 import SiteLayout from "@/Layout/SiteLayout";
 import { SITE_URL, DEFAULT_TITLE, DEFAULT_DESCRIPTION } from "./_lib/site";
+
+// GA4 측정 ID — 설정된 경우에만 분석 스크립트를 로드
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,6 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <SiteLayout>{children}</SiteLayout>
         </StyledComponentsRegistry>
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
