@@ -7,15 +7,6 @@
   # Next.js 16은 Node 20.9+ 필수 — Netlify 기본(18)로는 빌드 실패
   NODE_VERSION = "22"
 
-# /admin-stats 접근을 Basic 인증으로 보호하는 엣지 함수 (netlify/edge-functions/admin-auth.ts)
-[[edge_functions]]
-  path = "/admin-stats"
-  function = "admin-auth"
-
-[[edge_functions]]
-  path = "/admin-stats/"
-  function = "admin-auth"
-
 # Next.js 정적 번들은 파일명에 해시가 포함되므로 영구 캐시 가능
 [[headers]]
   for = "/_next/static/*"
